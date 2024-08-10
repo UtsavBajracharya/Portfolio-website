@@ -139,7 +139,7 @@ a {
   list-style: none;
   font-size : 16px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   color: #f5f5f5;
   transition: all ease 0.5s;
@@ -171,7 +171,7 @@ a {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(24, 20, 20, 0.527), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(17, 12, 12, 0.527), rgba(0, 0, 0, 0.5)),
     url("../images/coverpic.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -208,8 +208,9 @@ a {
   font-size: 102px;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
   color: rgb(246, 246, 246);
-  line-height: 1;
+  line-height: 0.9;
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 
 }
@@ -218,11 +219,11 @@ a {
   margin-bottom: 8px;
   text-align: center;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 1.8em;
   color: rgb(213, 213, 213);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 
 }
 
