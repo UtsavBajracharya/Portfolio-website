@@ -57,7 +57,7 @@ nav.scrolled {
 .nav-menu li a {
   text-decoration: none;
   list-style: none;
-  font-size : 16px;
+  font-size : 14px;
   font-weight: 600;
   text-transform: uppercase;
   transition: all ease 0.5s;
@@ -87,16 +87,16 @@ nav.scrolled {
   background: #ffffff;
   display: block;
   position: absolute;
-  bottom: 1px;
+  top:100%;
   left: 0;
   width: 0;
   height: 1px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-menu li a:hover {
  background-position: 0;
- font-weight: 700;
+ font-weight: 600;
 }
 
 .nav-menu li a:hover::before{
@@ -181,5 +181,40 @@ nav.scrolled {
   line-height: 1.8em;
   color: rgb(213, 213, 213);
 
+}
+
+
+/*Mobile responsive for header*/
+
+ @media screen and (max-width: 450px) {
+    .logo img {
+      width: 50%;
+
+    }
+
+    .banner {
+      background-position: top 10% left 60%; /* Move the image slightly to the right */
+    }
+
+    .nav-menu li a {
+      display: none;
+    }
+
+    nav {
+      padding: 3rem 1rem;
+    }
+
+    .col-left p{
+      font-size: 16px;
+      text-wrap: wrap;
+    }
+
+    .col-left h1 {
+      font-size: 65px;
+    }
+
+    .container {
+      padding: 20rem 2rem 18rem 2rem;
+    }
 }
 
