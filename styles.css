@@ -57,24 +57,23 @@ nav.scrolled {
 .nav-menu li a {
   text-decoration: none;
   list-style: none;
-  font-size : 14px;
-  font-weight: 400;
+  font-size : 16px;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #e1e1e1;
   transition: all ease 0.5s;
 
 }
 
-a {
+
+.nav-menu li a {
   background-image: linear-gradient(
     to right,
     #ffffff,
-    #e5e5e5 50%,
-    #d5d5d5 50%
+    #ffffff 50%,
+    #e3e3e3 50%
   );
   background-size: 200% 100%;
   background-position: -100%;
-  font-weight: 600;
   display: inline-block;
   padding: 5px 0;
   position: relative;
@@ -83,29 +82,36 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-/* a:before{
+.nav-menu li a:before{
   content: '';
   background: #ffffff;
   display: block;
   position: absolute;
-  bottom: 2px;
+  bottom: 1px;
   left: 0;
   width: 0;
-  height: 2px;
-  transition: all 0.3s ease-in-out;
-} */
+  height: 1px;
+  transition: all 0.4s ease-in-out;
+}
 
 .nav-menu li a:hover {
  background-position: 0;
  font-weight: 700;
 }
 
-a:hover::before{
+.nav-menu li a:hover::before{
   width: 100%;
 }
 
+
 .nav-link {
   margin-left: 3rem;
+} 
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
 }
 
 .hamburger {
