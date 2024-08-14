@@ -87,7 +87,7 @@ nav.scrolled {
   background: #ffffff;
   display: block;
   position: absolute;
-  top:100%;
+  top:90%;
   left: 0;
   width: 0;
   height: 1px;
@@ -152,7 +152,6 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 30px;
 }
 
 .col-left span {
@@ -186,14 +185,44 @@ nav.scrolled {
 
 /*Mobile responsive for header*/
 
- @media screen and (max-width: 450px) {
+/* 
+@media screen and (max-width: 420px) {
+  .nav-menu li a {
+    display: none;
+  }
+
+  .logo img {
+    width: 50% !important;
+  }
+
+  nav {
+    padding: 3rem 1rem;
+  }
+
+  .col-left p{
+    font-size: 16px !important;
+    text-wrap: wrap;
+  }
+
+  .col-left h1 {
+    font-size: 60px !important;
+  }
+
+  .container {
+    padding: 20rem 3rem 18rem 3rem;
+  }
+  
+} 
+
+
+ @media screen and (max-width: 520px) {
     .logo img {
       width: 50%;
 
     }
 
     .banner {
-      background-position: top 10% left 60%; /* Move the image slightly to the right */
+      background-position: top 10% left 60%; 
     }
 
     .nav-menu li a {
@@ -217,4 +246,139 @@ nav.scrolled {
       padding: 20rem 2rem 18rem 2rem;
     }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .logo img {
+    width: 40%;
+
+  }
+
+  .nav-menu li a {
+    display: none;
+  }
+
+  nav {
+    padding: 3rem 1rem;
+  }
+
+  .col-left p{
+    font-size: 20px;
+    text-wrap: wrap;
+  }
+
+  .col-left h1 {
+    font-size: 75px;
+  }
+
+  .container {
+    padding: 20rem 2rem 18rem 2rem;
+  }
+
+
+
+
+
+
+}
+
+*/
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 20rem 2rem 18rem 2rem;
+  }
+
+  .col-left h1 {
+    font-size: 70px;
+  }
+
+  .col-left p {
+    font-size: 16px;
+  }
+
+  nav {
+    padding: 3rem 1rem;
+  }
+
+  .nav-menu li a {
+    font-size: 12px;
+  }
+
+  .nav-logo {
+    font-size: 1.8rem;
+  }
+
+  .logo img {
+    width: 40%;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu items on mobile */
+  }
+
+
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 18rem 1.5rem 18rem 1.5rem !important;
+  }
+
+
+  .col-left h1 {
+    font-size: 60px;
+    line-height: 1.1;
+  }
+
+  .col-left p {
+    font-size: 16px;
+  }
+
+  nav {
+    padding: 3rem 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .nav-menu li a {
+    font-size: 10px;
+  }
+
+  .nav-logo {
+    font-size: 1.6rem;
+  }
+
+  .logo img {
+    width: 40%;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu items on mobile */
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 14rem 1rem;
+  }
+}
+
 
