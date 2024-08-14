@@ -322,6 +322,58 @@ nav.scrolled {
     display: none; /* Hide menu items on mobile */
   }
 
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    flex-direction: column;
+    background-color: #000000d3;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  li a {
+    color: #bfbfbf;
+    font-size: 16px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    top: 0;
+    padding: 4rem 0;
+  }
+
+  .nav-link {
+    margin: 1.2rem 0;
+  }
+
+  li {
+    margin: 1.2rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 5;
+    right: 35px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
 
 }
 
