@@ -27,7 +27,7 @@ nav {
 }
 
 nav.scrolled {
-  background-color: #000000d3;
+  background-color: #1e1e1ed3;
   box-shadow: rgba(56, 56, 57, 0.2) 0px 7px 29px 0px;
   opacity: 1.5;
 }
@@ -379,7 +379,7 @@ nav.scrolled {
 /* Mobile Styles */
 @media (max-width: 480px) {
   .container {
-    padding: 18rem 1.5rem 18rem 1.5rem !important;
+    padding: 20rem 1.5rem 15rem 1.5rem !important;
   }
 
 
@@ -421,15 +421,13 @@ nav.scrolled {
   }
 
   .nav-menu.active {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
   }
 
-  .container {
-    padding: 14rem 1rem;
-  }
+
 }
 
 
