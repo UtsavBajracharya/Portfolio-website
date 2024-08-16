@@ -58,7 +58,7 @@ nav.scrolled {
   text-decoration: none;
   list-style: none;
   font-size : 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   transition: all ease 0.5s;
 
@@ -90,13 +90,13 @@ nav.scrolled {
   top:90%;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   transition: all 0.3s ease-in-out;
 }
 
 .nav-menu li a:hover {
  background-position: 0;
- font-weight: 600;
+ font-weight: 700;
 }
 
 .nav-menu li a:hover::before{
@@ -129,9 +129,9 @@ nav.scrolled {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(17, 12, 12, 0.527), rgba(0, 0, 0, 0.5)),
-    url("../images/coverpic.jpg");
-  background-position: top;
+  background-image: linear-gradient(rgba(18, 11, 11, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../images/poo.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -175,114 +175,15 @@ nav.scrolled {
   margin-bottom: 8px;
   text-align: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 1.8em;
   color: rgb(213, 213, 213);
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 
 }
 
-
-/*Mobile responsive for header*/
-
-/* 
-@media screen and (max-width: 420px) {
-  .nav-menu li a {
-    display: none;
-  }
-
-  .logo img {
-    width: 50% !important;
-  }
-
-  nav {
-    padding: 3rem 1rem;
-  }
-
-  .col-left p{
-    font-size: 16px !important;
-    text-wrap: wrap;
-  }
-
-  .col-left h1 {
-    font-size: 60px !important;
-  }
-
-  .container {
-    padding: 20rem 3rem 18rem 3rem;
-  }
-  
-} 
-
-
- @media screen and (max-width: 520px) {
-    .logo img {
-      width: 50%;
-
-    }
-
-    .banner {
-      background-position: top 10% left 60%; 
-    }
-
-    .nav-menu li a {
-      display: none;
-    }
-
-    nav {
-      padding: 3rem 1rem;
-    }
-
-    .col-left p{
-      font-size: 16px;
-      text-wrap: wrap;
-    }
-
-    .col-left h1 {
-      font-size: 65px;
-    }
-
-    .container {
-      padding: 20rem 2rem 18rem 2rem;
-    }
-}
-
-
-@media only screen and (max-width: 768px) {
-  .logo img {
-    width: 40%;
-
-  }
-
-  .nav-menu li a {
-    display: none;
-  }
-
-  nav {
-    padding: 3rem 1rem;
-  }
-
-  .col-left p{
-    font-size: 20px;
-    text-wrap: wrap;
-  }
-
-  .col-left h1 {
-    font-size: 75px;
-  }
-
-  .container {
-    padding: 20rem 2rem 18rem 2rem;
-  }
-
-
-
-
-
-
-}
-
-*/
+/*Mobile responsive styles*/
 
 /* Tablet Styles */
 @media (max-width: 768px) {
@@ -425,6 +326,10 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     gap: 30px;
+  }
+
+  .banner {
+    background-position: center bottom right 5px;
   }
 
 
