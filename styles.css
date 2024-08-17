@@ -134,7 +134,7 @@ nav.scrolled {
 
 .banner {
   background-image: linear-gradient(rgba(18, 11, 11, 0.527), rgba(0, 0, 0, 0.5)),
-    url("../images/poo.jpg");
+    url("../images/cover.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,6 +223,7 @@ nav.scrolled {
 
   .banner {
     background-position: 40% center;
+    height: 80vh;
   }
 
 
@@ -298,12 +299,12 @@ nav.scrolled {
 /* Mobile Styles */
 @media (max-width: 480px) {
   .container {
-    padding: 20rem 1.5rem 15rem 1.5rem !important;
+    padding: 8rem 1.5rem 8rem 1.5rem !important;
   }
 
 
   .col-left h1 {
-    font-size: 58px;
+    font-size: 60px;
   }
 
   .col-left p {
@@ -369,6 +370,7 @@ nav.scrolled {
 
   .banner {
     background-position: 35% center;
+    height: 75vh;
   }
 
 
