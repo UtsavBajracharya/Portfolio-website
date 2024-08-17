@@ -210,7 +210,8 @@ nav.scrolled {
   }
 
   .nav-menu li a {
-    font-size: 12px;
+    font-size: 38px;
+    font-weight: 700;
   }
 
   .nav-logo {
@@ -240,12 +241,12 @@ nav.scrolled {
     left: 0;
     top: -100%;
     flex-direction: column;
-    background-color: #000000d3;
+    background-color: #000000f0;
     height: 100vh;
     width: 100%;
     text-align: center;
     display: block;
-    justify-content: space-evenly;
+    align-content: center;
     transition: top 0.6s ease-in-out;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
@@ -266,7 +267,7 @@ nav.scrolled {
   }
 
   li {
-    margin: 1.2rem 0;
+    margin: 2.6rem 0;
   }
 
   .hamburger {
@@ -311,7 +312,7 @@ nav.scrolled {
 
 
   .nav-menu li a {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 700;
   }
 
@@ -340,7 +341,7 @@ nav.scrolled {
   }
 
   li {
-    margin: 1.6rem 0;
+    margin: 2.6rem 0;
   }
 
   .hamburger {
