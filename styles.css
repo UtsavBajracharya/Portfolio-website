@@ -6,7 +6,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: 'Spartan', sans-serif;                       
+    scroll-behavior: smooth;
                                                                                                 
 }
 
@@ -58,7 +59,7 @@ nav.scrolled {
   text-decoration: none;
   list-style: none;
   font-size : 14px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   transition: all ease 0.5s;
 
@@ -90,13 +91,12 @@ nav.scrolled {
   top:90%;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   transition: all 0.3s ease-in-out;
 }
 
 .nav-menu li a:hover {
  background-position: 0;
- font-weight: 700;
 }
 
 .nav-menu li a:hover::before{
@@ -131,7 +131,7 @@ nav.scrolled {
 .banner {
   background-image: linear-gradient(rgba(18, 11, 11, 0.527), rgba(0, 0, 0, 0.5)),
     url("../images/poo.jpg");
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -163,7 +163,7 @@ nav.scrolled {
   margin-bottom: 40px;
   text-align: center;
   font-size: 100px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   color: rgb(246, 246, 246);
   line-height: 0.9;
@@ -172,10 +172,11 @@ nav.scrolled {
 }
 
 .col-left p {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.8em;
   color: rgb(213, 213, 213);
@@ -215,14 +216,24 @@ nav.scrolled {
     width: 40%;
   }
 
+  .banner {
+    background-position: 40% center;
+  }
+
+
   .hamburger {
-    display: block; /* Show hamburger menu on mobile */
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 5;
+    right: 35px;
   }
 
   .nav-menu {
     position: fixed;
-    left: -100%;
-    top: 4rem;
+    left: 0;
+    top: -100%;
     flex-direction: column;
     background-color: #000000d3;
     height: 100vh;
@@ -230,7 +241,7 @@ nav.scrolled {
     text-align: center;
     display: block;
     justify-content: space-evenly;
-    transition: 0.3s;
+    transition: top 0.6s ease-in-out;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
@@ -286,11 +297,11 @@ nav.scrolled {
 
   .col-left h1 {
     font-size: 60px;
-    line-height: 1.1;
   }
 
   .col-left p {
     font-size: 16px;
+    font-weight: 500;
   }
 
   nav {
@@ -302,7 +313,7 @@ nav.scrolled {
   }
 
   .nav-menu li a {
-    font-size: 10px;
+    font-size: 42px;
   }
 
   .nav-logo {
@@ -314,22 +325,71 @@ nav.scrolled {
   }
 
   .hamburger {
-    display: block; /* Show hamburger menu on mobile */
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 5;
+    right: 35px;
   }
 
   .nav-menu {
-    display: none; /* Hide menu items on mobile */
+    position: fixed;
+    left: 0;
+    top: -100%;
+    flex-direction: column;
+    background-color: #000000d3;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    align-content: center;
+    transition: top 0.6s ease-in-out;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
-  .nav-menu.active {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+  /* li a {
+    color: #bfbfbf;
+    font-size: 16px;
+  } */
+
+  /* .nav-menu.active {
+    left: 0;
+    top: 0;
+    padding: 4rem 0;
+  }
+
+  .nav-link {
+    margin: 1.2rem 0;
+  } */
+
+  li {
+    margin: 1.6rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 5;
+    right: 35px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .banner {
-    background-position: center bottom right 5px;
+    background-position: 35% center;
   }
 
 
