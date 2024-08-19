@@ -81,7 +81,7 @@ nav.scrolled {
     to right,
     #ffffff,
     #ffffff 50%,
-    #e3e3e3 50%
+    #d3d3d3 50%
   );
   background-size: 200% 100%;
   background-position: -100%;
@@ -165,7 +165,7 @@ nav.scrolled {
 
 .col-left span {
   text-align: center;
-  color: #ff0000;
+  color: #f40000;
 }
 
 .col-left h1 {
@@ -383,7 +383,76 @@ nav.scrolled {
 
 .about {
   color : #fff;
-  padding: 30px ;
+  padding: 8rem 10rem;
+  
 }
 
+.about h2 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin-bottom: 24px;
 
+
+}
+
+.about p {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #dfdfdf;
+
+}
+
+.about span {
+  color: #f40000;
+}
+
+.about-content {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+}
+
+.left-column p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #d6d6d6;
+  text-align: left;
+  padding-right: 40px;
+  margin-top: 30px;
+}
+
+.right-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+      padding: 0;
+  }
+
+  .right-column {
+      margin-top: 20px;
+  }
+}
