@@ -51,7 +51,7 @@ nav.scrolled {
 }
 
 .logo img:hover { 
-  transform: scale(1.1); 
+  transform: scale(1.2); 
 }
 
 .logo a {
@@ -388,12 +388,13 @@ nav.scrolled {
 }
 
 .about h2 {
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 24px;
+  color: #fff;
 
 
 }
@@ -414,10 +415,9 @@ nav.scrolled {
   display: flex;
   padding: 0;
   justify-content: center;
-  /* align-items: center; */
   flex-wrap: wrap;
   gap: 40px;
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 .left-column,
@@ -428,12 +428,19 @@ nav.scrolled {
 .left-column p {
   margin: 0;
   font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #d6d6d6;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #dfdfdf;
   text-align: left;
-  padding-right: 40px;
-  margin-top: 30px;
+  padding-right: 120px;
+  margin-top: 60px;
+}
+
+.left-column span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #8f8f8f;
+  letter-spacing: 1px;
 }
 
 .right-column img {
