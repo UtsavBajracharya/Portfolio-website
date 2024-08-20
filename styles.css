@@ -6,8 +6,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Spartan', sans-serif; 
-                         
+    font-family: 'Spartan', sans-serif;  
     scroll-behavior: smooth;
                                                                                                 
 }
@@ -385,8 +384,15 @@ nav.scrolled {
 /*About Page Style*/
 
 .about {
-  padding: 8rem 10rem;
+  width: 100%;
+  padding: 8rem;
+  display: grid;
+  justify-content:center ;
   
+}
+
+.content {
+  max-width: 1200px;
 }
 
 .about h2 {
@@ -466,17 +472,13 @@ nav.scrolled {
   }
 }
 
-@media(min-width: 2900px)  {
-  .about {
-    padding: 8rem 56rem;
+@media (min-width: 1500px) {
+
+  .left-column p {
+    padding-right: 80px; 
   }
 }
 
-@media(max-width: 2000px) {
-  .about {
-    padding: 8rem 10rem;
-  }
-}
 
 
 @media (max-width: 1200px){
