@@ -30,13 +30,16 @@ nav {
   z-index: 999;
   background: none;
   transition: background-color box-shadow 0.4s ease-in-out;
+  
 }
 
 nav.scrolled {
   background-color: #111111d3;
   box-shadow: rgba(56, 56, 57, 0.2) 0px 7px 29px 0px;
   opacity: 2.5;
+
 }
+
 
 .logo {
   display: flex;
@@ -403,6 +406,7 @@ nav.scrolled {
   line-height: 1.1;
   color: #dfdfdf;
 
+
 }
 
 .about span {
@@ -456,8 +460,21 @@ nav.scrolled {
 }
 
 @media (min-width: 1200px) {
+  
   .left-column p {
     padding-right: 40px;
+  }
+}
+
+@media(min-width: 2900px)  {
+  .about {
+    padding: 8rem 56rem;
+  }
+}
+
+@media(max-width: 2000px) {
+  .about {
+    padding: 8rem 10rem;
   }
 }
 
@@ -470,7 +487,7 @@ nav.scrolled {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 948px) {
 
   .about {
     padding: 6rem 3rem;
