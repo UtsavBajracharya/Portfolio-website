@@ -467,8 +467,6 @@ nav.scrolled {
   .left-column p {
     padding-right: 20px;
   }
-
-
 }
 
 
@@ -479,11 +477,12 @@ nav.scrolled {
   }
 
   .about p {
-    font-size: 50px;  
+    font-size: 45px;  
   }
   
   .about-content {
       flex-direction: column;
+      margin-top: 60px;
   }
 
   .left-column,
@@ -500,4 +499,28 @@ nav.scrolled {
   .right-column {
       margin-top: 24px;
   }
+}
+
+@media (max-width: 480px) {
+
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 16px;
+  
+  }
+  
+  .about p {
+    font-size: 28px;
+  
+  }
+  
+  .left-column p, .left-column span {
+    font-size: 16px;
+    margin: 0;
+  }
+
+
 }
