@@ -382,7 +382,6 @@ nav.scrolled {
 /*About Page Style*/
 
 .about {
-  color : #fff;
   padding: 8rem 10rem;
   
 }
@@ -395,7 +394,6 @@ nav.scrolled {
   line-height: 1.5em;
   margin-bottom: 24px;
   color: #fff;
-
 
 }
 
@@ -437,7 +435,7 @@ nav.scrolled {
 }
 
 .left-column span {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #8f8f8f;
   letter-spacing: 1px;
@@ -449,7 +447,41 @@ nav.scrolled {
   display: block;
 }
 
+/*Mobile responsive for about section*/
+@media (max-width: 1120px) {
+  .about {
+    padding: 4rem 6rem;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .left-column p {
+    padding-right: 40px;
+  }
+}
+
+
+@media (max-width: 1200px){
+  
+  .left-column p {
+    padding-right: 20px;
+  }
+
+
+}
+
+
 @media (max-width: 768px) {
+
+  .about {
+    padding: 6rem 3rem;
+  }
+
+  .about p {
+    font-size: 50px;  
+  }
+  
   .about-content {
       flex-direction: column;
   }
@@ -459,7 +491,13 @@ nav.scrolled {
       padding: 0;
   }
 
+  .left-column p {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
   .right-column {
-      margin-top: 20px;
+      margin-top: 24px;
   }
 }
