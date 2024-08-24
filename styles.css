@@ -385,7 +385,7 @@ nav.scrolled {
 
 .about {
   width: 100%;
-  padding: 8rem 0 4rem 0;
+  padding: 8rem 4rem 4rem 4rem;
   display: grid;
   justify-content:center ;
   
@@ -548,7 +548,7 @@ nav.scrolled {
 
 .services {
   width: 100%;
-  padding-bottom: 8rem;
+  padding: 0 4rem 8rem 4rem;
   display: grid;
   justify-content:center ;
   
@@ -693,5 +693,14 @@ nav.scrolled {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   background: #fff;
   color: #000;
+}
+
+@media (max-width: 1328px){
+  .cardboard .card {
+    position: relative;
+    min-width: 340px;
+    height: 400px;
+  }
+
 }
 
