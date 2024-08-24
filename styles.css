@@ -595,7 +595,7 @@ nav.scrolled {
 .cardboard .card {
   position: relative;
   min-width: 380px;
-  height: 450px;
+  height: 420px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -652,9 +652,9 @@ nav.scrolled {
 
 .cardboard .card .box .content h2 {
   position: absolute;
-  top: -20px;
+  top: -10px;
   right: 30px;
-  font-size: 6rem;
+  font-size: 4rem;
   color: rgba(255, 255, 255, 0.1);
 }
 
@@ -664,7 +664,6 @@ nav.scrolled {
   color: #fff;
   z-index: 1;
   transition: 0.5s;
-  margin-top: 30px;
   margin-bottom: 15px;
 }
 
@@ -713,8 +712,13 @@ nav.scrolled {
 
 }
 
+@media (max-width: 1028px) {
 
-
+  .cardboard .card {
+    min-width: 320px;
+  }
+  
+}
 
 
 @media (max-width: 948px) {
@@ -723,6 +727,15 @@ nav.scrolled {
     padding: 6rem 3rem;
   }
 
+}
+
+@media (max-width: 768px) {
+
+.cardboard .card {
+    width: 100%;
+    height: 400px;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -735,6 +748,14 @@ nav.scrolled {
     font-size: 16px;
   
   }
+
+  .cardboard .card {
+    width: 100%;
+    min-width: 200px;
+    height: 480px;
+  }
+
+
   
 }
 
