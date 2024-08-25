@@ -396,9 +396,9 @@ nav.scrolled {
 }
 
 .about h2 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: .5em;
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 40px;
@@ -556,9 +556,9 @@ nav.scrolled {
 
 
 .services h2 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: .5em;
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 24px;
@@ -621,7 +621,7 @@ nav.scrolled {
   top: 20px;
   left: 20px;
   right: 20px;
-  bottom: 60px;
+  bottom: 40px;
   background: #2a2b2f;
   border-radius: 15px;
   display: flex;
@@ -655,6 +655,7 @@ nav.scrolled {
   top: -10px;
   right: 30px;
   font-size: 4rem;
+  letter-spacing: normal;
   color: rgba(255, 255, 255, 0.1);
 }
 
@@ -665,6 +666,7 @@ nav.scrolled {
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
+  margin-top: 60px;
 }
 
 .cardboard .card .box .content p {
@@ -698,7 +700,7 @@ nav.scrolled {
   .cardboard .card {
     position: relative;
     min-width: 340px;
-    height: 400px;
+    height: 420px;
   }
 
 }
@@ -706,16 +708,18 @@ nav.scrolled {
 @media (max-width: 1200px) {
 
   .cardboard .card {
-    min-width: 280px;
-    height: 400px;
+    min-width: 350px;
+    height: 450px;
   }
+
+
 
 }
 
 @media (max-width: 1028px) {
 
   .cardboard .card {
-    min-width: 320px;
+    min-width: 330px;
   }
   
 }
@@ -726,6 +730,11 @@ nav.scrolled {
   .services {
     padding: 6rem 3rem;
   }
+
+  .cardboard .card {
+    min-width: 320px;
+  }
+  
 
 }
 
