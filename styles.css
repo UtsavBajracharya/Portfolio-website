@@ -154,6 +154,7 @@ nav.scrolled {
   position: relative;
   padding: 25rem 4rem 22rem 4rem;
   height: 80vh;
+  max-width: none;
   z-index: 2;
   overflow: hidden;
 }
@@ -201,6 +202,7 @@ nav.scrolled {
 @media (max-width: 768px) {
   .container {
     padding: 18rem 2rem 14rem 2rem;
+    max-width: none;
   }
 
   .col-left h1 {
@@ -307,6 +309,7 @@ nav.scrolled {
 @media (max-width: 480px) {
   .container {
     padding: 18rem 1.5rem 14rem 1.5rem !important;
+    max-width: none;
   }
 
   .banner {
@@ -798,4 +801,10 @@ nav.scrolled {
   max-width: 1200px;
   margin: 30px 0;
   padding: 0;
+}
+
+
+.flex {
+  flex-wrap: wrap;
+  gap: 30px 0;
 }
