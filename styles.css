@@ -154,7 +154,7 @@ nav.scrolled {
   position: relative;
   padding: 25rem 4rem 22rem 4rem;
   height: 80vh;
-  max-width: none;
+  max-width: none !important;
   z-index: 2;
   overflow: hidden;
 }
