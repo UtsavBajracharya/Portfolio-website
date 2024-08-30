@@ -154,7 +154,7 @@ nav.scrolled {
   position: relative;
   padding: 25rem 4rem 22rem 4rem;
   height: 80vh;
-  max-width: none;
+  max-width: none !important;
   z-index: 2;
   overflow: hidden;
 }
@@ -806,5 +806,17 @@ nav.scrolled {
 
 .flex {
   flex-wrap: wrap;
-  gap: 30px 0;
+
+}
+
+.justify-center {
+  gap: 30px;
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
 }
