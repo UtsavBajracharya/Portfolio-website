@@ -806,5 +806,13 @@ nav.scrolled {
 
 .flex {
   flex-wrap: wrap;
-  gap: 30px 0;
+
+}
+
+.justify-center {
+  gap: 30px;
+}
+
+.space-x-8, .space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0;
 }
