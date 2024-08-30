@@ -159,19 +159,19 @@ nav.scrolled {
   overflow: hidden;
 }
 
-.col-left {
+.col {
   display: grid;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.col-left span {
+.col span {
   text-align: center;
   color: #f40000;
 }
 
-.col-left h1 {
+.col h1 {
   margin-bottom: 40px;
   text-align: center;
   font-size: 95px;
@@ -183,7 +183,7 @@ nav.scrolled {
 
 }
 
-.col-left p {
+.col p {
   margin-bottom: 16px;
   text-align: center;
   font-size: 16px;
@@ -205,11 +205,11 @@ nav.scrolled {
     max-width: none;
   }
 
-  .col-left h1 {
+  .col h1 {
     font-size: 70px;
   }
 
-  .col-left p {
+  .col p {
     font-size: 16px;
   }
 
@@ -317,11 +317,11 @@ nav.scrolled {
     height: 100%;
   }
 
-  .col-left h1 {
+  .col h1 {
     font-size: 60px;
   }
 
-  .col-left p {
+  .col p {
     font-size: 14px;
     font-weight: 500;
   }
@@ -846,4 +846,26 @@ nav.scrolled {
   margin-bottom: 24px;
   color: #fff;
 
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.info-box {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  background: rgba(0,0,0,0.3);
+}
+
+.text-box {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
 }
