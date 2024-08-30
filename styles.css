@@ -813,6 +813,10 @@ nav.scrolled {
   gap: 30px;
 }
 
-.space-x-8, .space-x-10 > :not([hidden]) ~ :not([hidden]) {
-  margin-left: 0;
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0 !important;
 }
