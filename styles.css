@@ -858,7 +858,7 @@ nav.scrolled {
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .text-box {
@@ -868,4 +868,25 @@ nav.scrolled {
   border-radius: 6px;
   font-size: 14px;
   color: #000;
+}
+
+.left-content {
+  left: 0;
+}
+
+.right-content {
+  left: 50%;
+}
+
+.info-box img{
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+
+.right-content img {
+  left: -20px;
 }
