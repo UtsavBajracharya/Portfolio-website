@@ -858,7 +858,6 @@ nav.scrolled {
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 .text-box {
@@ -889,4 +888,25 @@ nav.scrolled {
 
 .right-content img {
   left: -20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.text-box h3{
+  font-weight: 600;
+}
+
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
 }
