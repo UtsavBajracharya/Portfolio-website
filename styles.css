@@ -900,6 +900,22 @@ nav.scrolled {
   left: 50%;
   margin-left: -3px;
   z-index: -1;
+  height: 0;
+}
+
+.animate-line::after {
+  animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+  0%{
+    height: 0;
+  }
+
+  100%{
+    height: 100%;
+  }
+  
 }
 
 .text-box h3{
@@ -909,4 +925,29 @@ nav.scrolled {
 .text-box small {
   display: inline-block;
   margin-bottom: 15px;
+}
+
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -14px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 25px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -14px;
 }

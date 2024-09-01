@@ -30,3 +30,15 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
+//Script for timeline scroll effect
+document.addEventListener('scroll', function() {
+    var timeline = document.querySelector('.timeline');
+    var timelinePosition = timeline.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight;
+
+    if (timelinePosition < screenPosition) {
+        timeline.classList.add('animate-line');
+    } else {
+        timeline.classList.remove('animate-line');
+    }
+});
