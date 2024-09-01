@@ -33,12 +33,20 @@ function closeMenu() {
 //Script for timeline scroll effect
 document.addEventListener('scroll', function() {
     var timeline = document.querySelector('.timeline');
-    var timelinePosition = timeline.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
+    var timelineTop = timeline.getBoundingClientRect().top;
+    var timelineHeight = timeline.offsetHeight;
+    var windowHeight = window.innerHeight;
 
-    if (timelinePosition < screenPosition) {
-        timeline.classList.add('animate-line');
-    } else {
-        timeline.classList.remove('animate-line');
-    }
+    // Calculate how far the top of the timeline is within the viewport
+    var scrollPosition = windowHeight - timelineTop;
+
+    // Normalize the scroll position to a percentage of the timeline's height
+    var scrollPercent = Math.max(0, Math.min(1, scrollPosition / (windowHeight + timelineHeight)));
+
+    // Set the height of the line based on the scroll percentage
+    var lineHeight = scrollPercent * timelineHeight;
+
+    // Apply the height to the ::after pseudo-element using inline styles
+    timeline.style.setProperty('--line-height', lineHeight + 'px');
+    timeline.querySelector('.timeline::after').style.height = lineHeight + 'px';
 });

@@ -890,33 +890,32 @@ nav.scrolled {
   left: -20px;
 }
 
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%; /* Full height for the fixed line */
+  background: rgb(78, 78, 78); /* Grey color for the background line */
+  top: 0;
+  left: 50%;
+  margin-left: -3px; /* Centers the line */
+  z-index: -2; /* Behind the moving line */
+}
+
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  height: 100%;
+  width: 4px;
+  height: var(--line-height, 0); /* Default height is 0 */
   background: #fff;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  height: 0;
+  transition: height 0.1s linear; /* Smooth transition */  
 }
 
-.animate-line::after {
-  animation: moveline 6s linear forwards;
-}
-
-@keyframes moveline {
-  0%{
-    height: 0;
-  }
-
-  100%{
-    height: 100%;
-  }
-  
-}
 
 .text-box h3{
   font-weight: 600;
