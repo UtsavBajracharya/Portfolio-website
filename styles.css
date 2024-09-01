@@ -907,7 +907,7 @@ nav.scrolled {
   content: '';
   position: absolute;
   width: 4px;
-  height: var(--line-height, 0); /* Default height is 0 */
+  height: var(--line-height, 0px); /* Default height is 0 */
   background: #fff;
   top: 0;
   left: 50%;
