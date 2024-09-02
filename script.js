@@ -30,6 +30,31 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
+
+// Script to turn greyscale icons into color effect
+const targets = document.querySelectorAll(".w-20.h-20");
+const isAnimated = "is-animated";
+const threshold = 0.5;
+
+function callback(entries, observer) {
+  entries.forEach((entry) => {
+    const elem = entry.target;
+    if (entry.intersectionRatio >= threshold) {
+      elem.classList.add(isAnimated);
+      //observer.unobserve(elem);
+    } else {
+      elem.classList.remove(isAnimated); //When the is-animated class is added (when the element is in view), the filter is reset to grayscale(0) brightness(1); to show the original colors.
+    }
+  });
+}
+
+const observer = new IntersectionObserver(callback, { threshold }); //The IntersectionObserver monitors when your icons enter the viewport. When they are at least 50% visible (threshold: 0.5), the is-animated class is added, triggering the color transition.
+for (const target of targets) {
+  observer.observe(target);
+}
+
+
+
 //Script for timeline scroll effect
 document.addEventListener('scroll', function() {
     var timeline = document.querySelector('.timeline');
