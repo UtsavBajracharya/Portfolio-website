@@ -812,10 +812,6 @@ nav.scrolled {
 } */
 
 
-:root {
-  --gray: #d2cdaa;
-}
-
 .icons img {
   filter: grayscale(1);
   transition: filter 1.5s ease-in-out;
@@ -855,8 +851,6 @@ nav.scrolled {
 /*Skills styling ends*/
 
 
-
-
 /*Experiences styling starts*/
 
 .experiences {
@@ -889,6 +883,36 @@ nav.scrolled {
   padding: 10px 50px;
   position: relative;
   width: 50%;
+  animation: movedown 3s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown {
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+}
+
+.info-box:nth-child(1){
+  animation-delay: 1s;
+}
+
+.info-box:nth-child(2){
+  animation-delay: 2s;
+}
+
+.info-box:nth-child(3){
+  animation-delay: 3s;
+}
+
+.info-box:nth-child(4){
+  animation-delay: 4s;
 }
 
 .text-box {
@@ -981,3 +1005,4 @@ nav.scrolled {
   border-right: 15px solid #fff;
   left: -14px;
 }
+
