@@ -58,6 +58,7 @@ for (const target of targets) {
 //Script for timeline scroll effect
 document.addEventListener('scroll', function() {
     var timeline = document.querySelector('.timeline');
+    var infoBoxes = document.querySelectorAll('.info-box');
     var timelineTop = timeline.getBoundingClientRect().top;
     var timelineHeight = timeline.offsetHeight;
     var windowHeight = window.innerHeight;
@@ -73,5 +74,16 @@ document.addEventListener('scroll', function() {
 
     // Apply the height to the ::after pseudo-element using inline styles
     timeline.style.setProperty('--line-height', lineHeight + 'px');
-    timeline.querySelector('.timeline::after').style.height = lineHeight + 'px';
+    // timeline.querySelector('.timeline::after').style.height = lineHeight + 'px';
+
+     // Check each info-box's position relative to the viewport and apply the 'visible' class
+     infoBoxes.forEach(function(box) {
+        var boxTop = box.getBoundingClientRect().top;
+        if (boxTop < windowHeight * 0.85) { // Trigger slightly before it's fully in view
+            box.classList.add('visible');
+        } else {
+            box.classList.remove('visible');
+        }
+    });
+
 });
