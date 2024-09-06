@@ -73,7 +73,7 @@ nav.scrolled {
   text-decoration: none;
   list-style: none;
   font-size : 14px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all ease 0.5s;
@@ -82,20 +82,16 @@ nav.scrolled {
 
 
 .nav-menu li a {
-  background-image: linear-gradient(
-    to right,
-    #ffffff,
-    #ffffff 50%,
-    #d3d3d3 50%
-  );
+  background: none;
+  color: #fff; /* Default color is white */
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
   padding: 5px 0;
   position: relative;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 .nav-menu li a:before{
@@ -112,6 +108,12 @@ nav.scrolled {
 
 .nav-menu li a:hover {
  background-position: 0;
+ color: #fff;
+}
+
+/* Set the non-hovered items to gray */
+.nav-menu li a.non-hovered {
+  color: #bbbbbbcb;
 }
 
 .nav-menu li a:hover::before{
@@ -189,7 +191,7 @@ nav.scrolled {
 .col p {
   margin-bottom: 16px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -222,7 +224,7 @@ nav.scrolled {
 
   .nav-menu li a {
     font-size: 38px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .nav-logo {
@@ -332,7 +334,7 @@ nav.scrolled {
 
   .nav-menu li a {
     font-size: 38px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .nav-logo {
@@ -502,7 +504,7 @@ nav.scrolled {
   }
 
   .about p {
-    font-size: 45px;  
+    font-size: 42px;  
   }
   
   .about-content {
@@ -661,6 +663,7 @@ nav.scrolled {
   top: -10px;
   right: 30px;
   font-size: 4rem;
+  font-weight: 500;
   letter-spacing: normal;
   color: rgba(255, 255, 255, 0.1);
 }

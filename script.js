@@ -87,3 +87,32 @@ document.addEventListener('scroll', function() {
     });
 
 });
+
+
+
+
+// Select all the menu links
+const menuItems = document.querySelectorAll('.nav-menu li a');
+
+// Loop through each menu item
+menuItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    // Add 'hovered' class to the current hovered item
+    item.classList.add('hover');
+    
+    // Remove 'hovered' class from all other items, and add 'non-hovered' class
+    menuItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.add('non-hovered');
+      }
+    });
+  });
+
+  item.addEventListener('mouseleave', () => {
+    // Remove all 'hovered' and 'non-hovered' classes when no item is hovered
+    item.classList.remove('hover');
+    menuItems.forEach(otherItem => {
+      otherItem.classList.remove('non-hovered');
+    });
+  });
+});
