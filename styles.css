@@ -982,5 +982,80 @@ nav.scrolled {
   }
 }
 
+/*Project styling starts*/
+.projects {
+  width: 100%;
+  padding: 0 4rem 8rem 4rem;
+  display: grid;
+  justify-content: center;
+}
+
+.projects h2 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.portfolio-nav {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+
+}
+
+
+.portfolio-nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  color: white;
+
+}
+
+.portfolio-nav ul li:hover{
+  color: #0bceaf;
+}
+
+.portfolio-nav ul li.active{
+  color: #0bceaf;
+}
+
+.portfolio-projects {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.portfolio-projects .itembox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  display: block;
+}
+
+
+.portfolio-projects .itembox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+
+
+
+
 
 
