@@ -425,17 +425,17 @@ nav.scrolled {
 .left-column p {
   margin: 0;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.8;
   color: #dfdfdf;
-  text-align: justify;
+  text-align: left;
   padding-right: 120px;
   margin-top: 60px;
 }
 
 .left-column span {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: #8f8f8f;
   letter-spacing: 1px;
 }
@@ -642,7 +642,7 @@ nav.scrolled {
 
 .cardboard .card .box .content p {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.8;
   color: rgba(209, 209, 209, 0.9);
   z-index: 1;
