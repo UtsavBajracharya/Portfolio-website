@@ -10,6 +10,70 @@ document.addEventListener('scroll', () => {
 });
 
 
+
+//Script for timeline scroll effect
+document.addEventListener('scroll', function() {
+  var timeline = document.querySelector('.timeline');
+  var infoBoxes = document.querySelectorAll('.info-box');
+  var timelineTop = timeline.getBoundingClientRect().top;
+  var timelineHeight = timeline.offsetHeight;
+  var windowHeight = window.innerHeight;
+
+  // Calculate how far the top of the timeline is within the viewport
+  var scrollPosition = windowHeight - timelineTop;
+
+  // Normalize the scroll position to a percentage of the timeline's height
+  var scrollPercent = Math.max(0, Math.min(1, scrollPosition / (windowHeight + timelineHeight)));
+
+  // Set the height of the line based on the scroll percentage
+  var lineHeight = scrollPercent * timelineHeight;
+
+  // Apply the height to the ::after pseudo-element using inline styles
+  timeline.style.setProperty('--line-height', lineHeight + 'px');
+  // timeline.querySelector('.timeline::after').style.height = lineHeight + 'px';
+
+   // Check each info-box's position relative to the viewport and apply the 'visible' class
+   infoBoxes.forEach(function(box) {
+      var boxTop = box.getBoundingClientRect().top;
+      if (boxTop < windowHeight * 0.85) { // Trigger slightly before it's fully in view
+          box.classList.add('visible');
+      } else {
+          box.classList.remove('visible');
+      }
+  });
+
+});
+
+
+
+// Script for nav menu link hover effect
+const menuItems = document.querySelectorAll('.nav-menu li a'); // Select all the menu links
+
+// Loop through each menu item
+menuItems.forEach(item => {
+item.addEventListener('mouseenter', () => {
+  // Add 'hovered' class to the current hovered item
+  item.classList.add('hover');
+  
+  // Remove 'hovered' class from all other items, and add 'non-hovered' class
+  menuItems.forEach(otherItem => {
+    if (otherItem !== item) {
+      otherItem.classList.add('non-hovered');
+    }
+  });
+});
+
+item.addEventListener('mouseleave', () => {
+  // Remove all 'hovered' and 'non-hovered' classes when no item is hovered
+  item.classList.remove('hover');
+  menuItems.forEach(otherItem => {
+    otherItem.classList.remove('non-hovered');
+  });
+});
+});
+
+
+
 // Script for mobile nav menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -53,69 +117,41 @@ for (const target of targets) {
   observer.observe(target);
 }
 
+// Script for project filter
+let sortBtn = document.querySelector('.filter-menu').children;
+let sortItem = document.querySelector('.filter-item').children;
 
+for(let i = 0; i < sortBtn.length; i++){
+    sortBtn[i].addEventListener('click', function(){
+        for(let j = 0; j< sortBtn.length; j++){
+            sortBtn[j].classList.remove('current');
+        }
 
-//Script for timeline scroll effect
-document.addEventListener('scroll', function() {
-    var timeline = document.querySelector('.timeline');
-    var infoBoxes = document.querySelectorAll('.info-box');
-    var timelineTop = timeline.getBoundingClientRect().top;
-    var timelineHeight = timeline.offsetHeight;
-    var windowHeight = window.innerHeight;
+        this.classList.add('current');
+        
 
-    // Calculate how far the top of the timeline is within the viewport
-    var scrollPosition = windowHeight - timelineTop;
+        let dataFilter = this.getAttribute('data-filter');
 
-    // Normalize the scroll position to a percentage of the timeline's height
-    var scrollPercent = Math.max(0, Math.min(1, scrollPosition / (windowHeight + timelineHeight)));
+        for(let k = 0; k < sortItem.length; k++){
+            sortItem[k].classList.remove('active');
+            sortItem[k].classList.add('hide');
 
-    // Set the height of the line based on the scroll percentage
-    var lineHeight = scrollPercent * timelineHeight;
-
-    // Apply the height to the ::after pseudo-element using inline styles
-    timeline.style.setProperty('--line-height', lineHeight + 'px');
-    // timeline.querySelector('.timeline::after').style.height = lineHeight + 'px';
-
-     // Check each info-box's position relative to the viewport and apply the 'visible' class
-     infoBoxes.forEach(function(box) {
-        var boxTop = box.getBoundingClientRect().top;
-        if (boxTop < windowHeight * 0.85) { // Trigger slightly before it's fully in view
-            box.classList.add('visible');
-        } else {
-            box.classList.remove('visible');
+            if(sortItem[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
+                sortItem[k].classList.remove('hide');
+                sortItem[k].classList.add('active');
+            }
         }
     });
-
-});
-
+}
 
 
 
-// Select all the menu links
-const menuItems = document.querySelectorAll('.nav-menu li a');
 
-// Loop through each menu item
-menuItems.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    // Add 'hovered' class to the current hovered item
-    item.classList.add('hover');
-    
-    // Remove 'hovered' class from all other items, and add 'non-hovered' class
-    menuItems.forEach(otherItem => {
-      if (otherItem !== item) {
-        otherItem.classList.add('non-hovered');
-      }
-    });
-  });
 
-  item.addEventListener('mouseleave', () => {
-    // Remove all 'hovered' and 'non-hovered' classes when no item is hovered
-    item.classList.remove('hover');
-    menuItems.forEach(otherItem => {
-      otherItem.classList.remove('non-hovered');
-    });
-  });
-});
+
+
+
+
 
 
 

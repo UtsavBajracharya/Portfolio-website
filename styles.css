@@ -425,17 +425,17 @@ nav.scrolled {
 .left-column p {
   margin: 0;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.8;
   color: #dfdfdf;
-  text-align: justify;
+  text-align: left;
   padding-right: 120px;
   margin-top: 60px;
 }
 
 .left-column span {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   color: #8f8f8f;
   letter-spacing: 1px;
 }
@@ -642,7 +642,7 @@ nav.scrolled {
 
 .cardboard .card .box .content p {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.8;
   color: rgba(209, 209, 209, 0.9);
   z-index: 1;
@@ -981,6 +981,115 @@ nav.scrolled {
     left: -15px;
   }
 }
+
+/*Project styling starts*/
+.projects {
+  width: 100%;
+  padding: 0 4rem 8rem 4rem;
+  display: grid;
+  justify-content: center;
+}
+
+.projects h2 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+
+.gallery{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.filter-menu{
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+.filter-menu li{
+  cursor: pointer;
+  color: white;
+  
+}
+.filter-menu li:hover,
+.filter-menu li.current{
+  color: #0bceaf;
+}
+
+.filter-item li{
+  width: 50%;
+  padding: 16px;
+  float: left;
+  
+}
+
+.filter-item li.active{
+  width: 50%;
+  padding: 16px;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0px, 0px, 0px);
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-delay: 0ms;
+}
+
+.filter-item li.hide{
+  width: 0%;
+  padding: 0;
+  opacity: 0; 
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0px, 50px, 0px); /* Translate down */
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-delay: 0ms;
+}
+
+
+.filter-item img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px){
+  .filter-item li.active,
+  .filter-item li{
+      width: 33.33%;
+  }
+
+  h2{
+      font-size: 190%;
+  }
+}
+@media screen and (min-width: 1280px){
+  .filter-item li.active,
+  .filter-item li{
+      width: 25%;
+  }
+
+  h2{
+      font-size: 270%;
+  }
+}
+
+
+
+
+
+
 
 
 
