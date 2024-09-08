@@ -1008,15 +1008,54 @@ nav.scrolled {
 }
 
 
-.filter-menu{
+.filter-wrapper {
+  position: relative;
+  text-align: right; /* Align the icon to the right */
   margin-bottom: 24px;
+}
+
+.filter-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  margin-right: 20px; /* Adjust the margin to give some spacing */
+}
+
+.filter-toggle:hover {
+  color: #0bceaf;
+}
+
+.filter-toggle .icon {
+  display: inline-block;
+}
+
+.filter-menu {
   display: flex;
-  justify-content: end;
+  justify-content: center; /* Center the filter items inside the menu */
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
+  transition: transform 1s ease, opacity 0.5s ease;
+  transform: translateX(50%);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 50px; /* Adjust to align with the icon */
+  top: 0;  
+  padding: 5px;
+  white-space: nowrap; /* Keep all items on the same line */
 
 }
+
+.filter-menu.active {
+  transform: translateX(-20px); /* Align the filter menu slightly left, near the icon */
+  opacity: 1;
+  visibility: visible;
+}
+
+
 .filter-menu li{
   cursor: pointer;
   color: white;
@@ -1033,6 +1072,7 @@ nav.scrolled {
   float: left;
   
 }
+
 
 .filter-item li.active{
   width: 50%;
@@ -1055,6 +1095,7 @@ nav.scrolled {
   transition-duration: 0.4s;
   transition-delay: 0ms;
 }
+
 
 
 .filter-item img{

@@ -145,6 +145,12 @@ for(let i = 0; i < sortBtn.length; i++){
 }
 
 
+document.querySelector('.filter-toggle').addEventListener('click', function() {
+  const filterMenu = document.querySelector('.filter-menu');
+  filterMenu.classList.toggle('active');
+});
+
+
 
 
 
