@@ -145,10 +145,51 @@ for(let i = 0; i < sortBtn.length; i++){
 }
 
 
+// document.querySelector('.filter-toggle').addEventListener('click', function() {
+//   const filterMenu = document.querySelector('.filter-menu');
+//   filterMenu.classList.toggle('active');
+// });
+
+// document.querySelector('.filter-toggle').addEventListener('click', function() {
+//   const filterMenu = document.querySelector('.filter-menu');
+//   const toggleIcon = document.querySelector('.toggle-icon'); // Get the icon
+
+//   if (filterMenu.classList.contains('active')) {
+//     // If the menu is active, close the menu and change the icon back to ri-menu-5-fill
+//     filterMenu.classList.remove('active');
+//     filterMenu.classList.add('fade-out');
+//     toggleIcon.classList.remove('ri-menu-4-fill'); // Remove close icon
+//     toggleIcon.classList.add('ri-menu-5-fill'); // Add menu icon
+//   } else {
+//     // If the menu is inactive, open it and change the icon to ri-close-fill
+//     filterMenu.classList.remove('fade-out');
+//     filterMenu.classList.add('active');
+//     toggleIcon.classList.remove('ri-menu-5-fill'); // Remove menu icon
+//     toggleIcon.classList.add('ri-menu-4-fill'); // Add close icon
+//   }
+// });
+
+
 document.querySelector('.filter-toggle').addEventListener('click', function() {
   const filterMenu = document.querySelector('.filter-menu');
-  filterMenu.classList.toggle('active');
+  const toggleIcon = document.querySelector('.toggle-icon'); // Get the icon
+
+  if (filterMenu.classList.contains('active')) {
+    // If the menu is active, close the menu and change the icon back to ri-menu-4-fill
+    filterMenu.classList.remove('active');
+    filterMenu.classList.add('fade-out');
+    toggleIcon.classList.remove('ri-menu-4-fill'); // Remove hamburger icon
+    toggleIcon.classList.add('ri-menu-2-fill'); // Add menu icon
+  } else {
+    // If the menu is inactive, open it and change the icon to ri-menu-4-fill
+    filterMenu.classList.remove('fade-out');
+    filterMenu.classList.add('active');
+    toggleIcon.classList.remove('ri-menu-2-fill'); // Remove menu icon
+    toggleIcon.classList.add('ri-menu-4-fill'); // Add hamburger icon
+  }
 });
+
+
 
 
 

@@ -1012,7 +1012,10 @@ nav.scrolled {
   position: relative;
   text-align: right; /* Align the icon to the right */
   margin-bottom: 24px;
+  overflow: hidden; /* Ensure that the wrapper doesn't allow overflow */
+
 }
+
 
 .filter-toggle {
   background: none;
@@ -1024,8 +1027,11 @@ nav.scrolled {
   margin-right: 20px; /* Adjust the margin to give some spacing */
 }
 
-.filter-toggle:hover {
-  color: #0bceaf;
+
+
+.filter-toggle .icon {
+  display: inline-block;
+  transition: color 0.5s ease; /* Smooth icon color transition */
 }
 
 .filter-toggle .icon {
@@ -1037,8 +1043,8 @@ nav.scrolled {
   justify-content: center; /* Center the filter items inside the menu */
   align-items: center;
   gap: 30px;
-  transition: transform 1s ease, opacity 0.5s ease;
-  transform: translateX(50%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transition both transform and opacity */
+  transform: translateX(-100%); /* Initially off-screen to the left */
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -1049,10 +1055,24 @@ nav.scrolled {
 
 }
 
+.filter-menu.fade-out {
+  transform: translateX(-100%); /* Slide out to the left */
+  opacity: 0; /* Fade out */
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Slow fade-out and slide-out */
+}
+
+
 .filter-menu.active {
-  transform: translateX(-20px); /* Align the filter menu slightly left, near the icon */
+  transform: translateX(-5%); /* Slide in from the left */
   opacity: 1;
   visibility: visible;
+}
+
+.filter-menu:not(.active) {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0s 0.5s; /* Delay visibility change */
 }
 
 
