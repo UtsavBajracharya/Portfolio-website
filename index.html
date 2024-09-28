@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
-
     <!-- Remix Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
@@ -259,32 +258,44 @@
                 </div>
              -->
 
-             <div class="project-section">
-                <ul class="project-list">
-                  <li data-image="image1.jpg">
-                    <span class="project-name">TWICE</span>
-                    <span class="project-category">Interaction & Development</span>
-                  </li>
-                  <li data-image="image2.jpg">
-                    <span class="project-name">The Damai</span>
-                    <span class="project-category">Design & Development</span>
-                  </li>
-                  <li data-image="image3.jpg">
-                    <span class="project-name">FABRIC™</span>
-                    <span class="project-category">Design & Development</span>
-                  </li>
-                </ul>
-            
-                <div class="project-preview">
-                  <img id="project-image" src="images/ProactiveTutors.jpg" alt="Project Preview">
-                  <button id="view-btn">View</button>
-                </div>
-            
-              </div>
+                                <!-- New section added here -->
+        <div class="project-entry" data-image="path/to/image1.jpg">
+            <h3>TWICE</h3>
+            <p>Interaction & Development</p>
+            <div class="popup">
+                <img src="images/Encapsulator.jpg" alt="TWICE">
+                <button class="view-button">View</button>
+            </div>
+        </div>
+        <div class="project-entry" data-image="path/to/image2.jpg">
+            <h3>The Damai</h3>
+            <p>Design & Development</p>
+            <div class="popup">
+                <img src="images/Zakra.png" alt="The Damai">
+                <button class="view-button">View</button>
+            </div>
+        </div>
+        <div class="project-entry" data-image="path/to/image3.jpg">
+            <h3>FABRIC™</h3>
+            <p>Design & Development</p>
+            <div class="popup">
+                <img src="images/ProactiveTutors.jpg" alt="FABRIC™">
+                <button class="view-button">View</button>
+            </div>
+        </div>
+
+
+
 
         </div>
      </section>
 
+     <!-- Popup Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
     
 
 

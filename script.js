@@ -190,4 +190,25 @@ projectListItems.forEach(item => {
 
 
 
+document.querySelectorAll('.view-button').forEach(button => {
+  button.addEventListener('click', function() {
+    const imageSrc = this.parentElement.querySelector('img').src;
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+    captionText.innerHTML = this.parentElement.parentElement.querySelector('h3').innerText;
+  });
+});
+
+document.querySelector('.close').onclick = function() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+};
+
+
+
+
 
