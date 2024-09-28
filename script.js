@@ -165,12 +165,26 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
 });
 
 
+const projectListItems = document.querySelectorAll('.project-list li');
+const projectPreview = document.querySelector('.project-preview');
+const projectImage = document.getElementById('project-image');
 
+projectListItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    const imageSrc = item.getAttribute('data-image');
+    projectImage.src = imageSrc;
+    projectPreview.style.display = 'flex'; // Show the image
+  });
 
+  item.addEventListener('mouseout', () => {
+    projectPreview.style.display = 'none'; // Hide the image on mouse out
+  });
 
-
-
-
+  item.addEventListener('mousemove', (e) => {
+    projectPreview.style.top = `${e.clientY - 150}px`; // Adjust position dynamically
+    projectPreview.style.left = `${e.clientX + 20}px`; 
+  });
+});
 
 
 
