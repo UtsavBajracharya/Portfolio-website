@@ -458,6 +458,10 @@ nav.scrolled {
   }
 }
 
+.right-column img {
+  height: auto;
+}
+
 @media (min-width: 1200px) {
   .left-column p {
     padding-right: 40px;
