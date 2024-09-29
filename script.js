@@ -165,6 +165,8 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
 });
 
 
+
+
 const projectListItems = document.querySelectorAll('.project-list li');
 const projectPreview = document.querySelector('.project-preview');
 const projectImage = document.getElementById('project-image');
