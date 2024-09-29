@@ -475,7 +475,7 @@ nav.scrolled {
 }
 .filter-menu li:hover,
 .filter-menu li.current{
-  color: #0bceaf;
+  color: #f40000;
 }
 
 .filter-item li{
@@ -509,7 +509,6 @@ nav.scrolled {
 }
 
 
-
 .filter-item img{
   display: block;
   width: 100%;
@@ -539,142 +538,4 @@ nav.scrolled {
 }
 
 
-.project-section {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.project-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-list li {
-  width: 100%;
-  display: flex;
-  justify-content:flex-start;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease; /* Added background color transition */
-  color: white; /* Make text white */
-}
-
-.project-list li:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Light grey hover effect */
-  color: lightgrey; /* Change text color to light grey on hover */
-}
-
-.project-name {
-  font-size: 2em;
-  font-weight: bold;
-  flex: 1; /* Allow name to take more space */
-}
-
-.project-category {
-  font-size: 1.2em;
-  margin-left: 40px; /* Add more space between name and category */
-}
-
-.project-preview {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: auto;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-preview img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-#view-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #ffcc00;
-  color: #121212;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-#view-btn:hover {
-  background-color: #ff9900;
-}
-
 /* Responsive Design */
-
-/* For tablets and small screens */
-@media (max-width: 768px) {
-  .project-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  .project-name {
-    font-size: 1.8em;
-  }
-
-  .project-category {
-    font-size: 1em;
-    margin-top: 5px;
-    margin-left: 0; /* Reset the margin for mobile */
-  }
-
-  .project-preview {
-    width: 250px;
-  }
-
-  #view-btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-}
-
-/* For mobile phones */
-@media (max-width: 480px) {
-  .project-list li {
-    padding: 10px;
-  }
-
-  .project-name {
-    font-size: 1.6em;
-  }
-
-  .project-category {
-    font-size: 0.9em;
-  }
-
-  .project-preview {
-    width: 200px;
-  }
-
-  #view-btn {
-    padding: 5px 10px;
-    font-size: 0.8em;
-  }
-}
-
-/* Full-screen preview on very large screens */
-@media (min-width: 1200px) {
-  .project-preview {
-    width: 400px;
-  }
-
-  .project-name {
-    font-size: 2.5em;
-  }
-
-  .project-category {
-    font-size: 1.5em;
-  }
-}
-

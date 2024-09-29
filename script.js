@@ -190,8 +190,6 @@ projectListItems.forEach(item => {
 
 
 
-
-
 document.querySelectorAll('.view-button').forEach(button => {
   button.addEventListener('click', function() {
     const imageSrc = this.parentElement.querySelector('img').src;
