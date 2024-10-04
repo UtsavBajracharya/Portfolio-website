@@ -145,7 +145,7 @@ nav.scrolled {
   flex: 1;
   align-items: center;
   position: relative;
-  padding: 16rem 4rem 12rem 4rem;
+  padding: 14rem 4rem 6rem 4rem;
   height: 50vh;
   max-width: none !important;
   z-index: 2;
