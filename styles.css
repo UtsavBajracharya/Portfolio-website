@@ -1,6 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @import url("https://fonts.cdnfonts.com/css/poppins");
 
+:root {
+  --light-yellow: #fff9df;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,7 +80,7 @@ nav.scrolled {
 
 .nav-menu li a {
   background: none;
-  color: #fff; /* Default color is white */
+  color: var(--light-yellow); /* Default color is white */
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -89,7 +93,7 @@ nav.scrolled {
 
 .nav-menu li a:before {
   content: "";
-  background: #ffffff;
+  background: var(--light-yellow);
   display: block;
   position: absolute;
   top: 90%;
@@ -101,7 +105,7 @@ nav.scrolled {
 
 .nav-menu li a:hover {
   background-position: 0;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 /* Set the non-hovered items to gray */
@@ -134,11 +138,11 @@ nav.scrolled {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
+  background-color: var(--light-yellow);
 }
 
 .banner {
-  background-image: linear-gradient(rgba(18, 11, 11, 0.527), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(18, 18, 11, 0.527), rgba(0, 0, 0, 0.5)),
     url("../images/cover.jpg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -175,7 +179,7 @@ nav.scrolled {
   font-size: 95px;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgb(246, 246, 246);
+  color: var(--light-yellow);
   line-height: 0.9;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -188,7 +192,7 @@ nav.scrolled {
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.8em;
-  color: rgb(240, 240, 240);
+  color: var(--light-yellow);
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,7 +238,7 @@ nav.scrolled {
   .hamburger {
     display: block;
     cursor: pointer;
-    color: #fff;
+    color: var(--light-yellow);
     position: absolute;
     top: 5;
     right: 35px;
@@ -279,7 +283,7 @@ nav.scrolled {
   .hamburger {
     display: block;
     cursor: pointer;
-    color: #fff;
+    color: var(--light-yellow);
     position: absolute;
     top: 5;
     right: 35px;
@@ -355,7 +359,7 @@ nav.scrolled {
   .hamburger {
     display: block;
     cursor: pointer;
-    color: #fff;
+    color: var(--light-yellow);
     position: absolute;
     top: 5;
     right: 35px;
@@ -395,14 +399,14 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 40px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 .about p {
   font-size: 56px;
   font-weight: 600;
   line-height: 1.2;
-  color: #dfdfdf;
+  color: var(--light-yellow);
 }
 
 .about span {
@@ -429,7 +433,7 @@ nav.scrolled {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
-  color: #dfdfdf;
+  color: var(--light-yellow);
   text-align: left;
   padding-right: 120px;
   margin-top: 60px;
@@ -438,7 +442,7 @@ nav.scrolled {
 .left-column span {
   font-size: 16px;
   font-weight: 300;
-  color: #8f8f8f;
+  color: #b4b09e;
   letter-spacing: 1px;
 }
 
@@ -478,7 +482,6 @@ nav.scrolled {
 }
 
 @media (max-width: 948px) {
-
   .about {
     padding: 6rem 3rem;
   }
@@ -552,7 +555,7 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 24px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 .services p {
@@ -648,7 +651,7 @@ nav.scrolled {
 .cardboard .card .box .content h3 {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--light-yellow);
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
@@ -659,7 +662,7 @@ nav.scrolled {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.8;
-  color: rgba(209, 209, 209, 0.9);
+  color: var(--light-yellow);
   z-index: 1;
   transition: 0.5s;
 }
@@ -671,14 +674,14 @@ nav.scrolled {
   background: black;
   border-radius: 5px;
   text-decoration: none;
-  color: white;
+  color: var(--light-yellow);
   margin-top: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
 .cardboard .card .box .content a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  background: #fff;
+  background: var(--light-yellow);
   color: #000;
 }
 
@@ -752,7 +755,7 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 60px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 .icons {
@@ -824,7 +827,7 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 24px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 .timeline {
@@ -849,7 +852,7 @@ nav.scrolled {
 
 .text-box {
   padding: 20px 30px;
-  background: #fff;
+  background: var(--light-yellow);
   position: relative;
   border-radius: 6px;
   font-size: 14px;
@@ -894,7 +897,7 @@ nav.scrolled {
   position: absolute;
   width: 4px;
   height: var(--line-height, 0px); /* Default height is 0 */
-  background: #fff;
+  background: var(--light-yellow);
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -920,8 +923,9 @@ nav.scrolled {
 
 .timeline-middle-text p {
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.8;
-  color: #b9b9b9;
+  color: var(--light-yellow);
 }
 
 .text-box h3 {
@@ -1021,11 +1025,11 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 60px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 .project-entry {
-  color: #fff; /* White text color */
+  color: var(--light-yellow); /* White text color */
   margin-bottom: 30px; /* Spacing between entries */
   width: 100%; /* Full width */
   display: flex; /* Use flexbox */
@@ -1036,7 +1040,7 @@ nav.scrolled {
 }
 
 .project-entry h3 {
-  font-size: 36px; /* Large font size for headings */
+  font-size: 46px; /* Large font size for headings */
   font-weight: bold; /* Bold font weight for headings */
   margin-right: 20px; /* Gap between h3 and p */
 }
@@ -1130,6 +1134,26 @@ nav.scrolled {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn-more {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-project {
+  color: var(--light-yellow);
+  padding: 16px 40px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 2px solid var(--light-yellow);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.btn-project:hover {
+  background-color: var(--light-yellow);
+  color: #121212;
 }
 
 /* Responsive Design */
