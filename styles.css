@@ -2,7 +2,7 @@
 @import url("https://fonts.cdnfonts.com/css/poppins");
 
 :root {
-  --light-yellow: #fff9df;
+  --light-yellow: #F9F6EE;
 }
 
 * {
@@ -442,7 +442,7 @@ nav.scrolled {
 .left-column span {
   font-size: 16px;
   font-weight: 300;
-  color: #b4b09e;
+  color: #9a9a9a;
   letter-spacing: 1px;
 }
 
@@ -945,7 +945,7 @@ nav.scrolled {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid var(--light-yellow);
   right: -14px;
 }
 
@@ -957,7 +957,7 @@ nav.scrolled {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #fff;
+  border-right: 15px solid var(--light-yellow);
   left: -14px;
 }
 
