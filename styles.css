@@ -71,7 +71,7 @@ nav.scrolled {
 .nav-menu li a {
   text-decoration: none;
   list-style: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -80,15 +80,12 @@ nav.scrolled {
 
 .nav-menu li a {
   background: none;
-  color: var(--light-yellow); /* Default color is white */
+  color: var(--light-yellow); 
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
-  padding: 5px 0;
+  padding: 0.313rem 0;
   position: relative;
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out; */
 }
 
 .nav-menu li a:before {
@@ -135,7 +132,7 @@ nav.scrolled {
   display: block;
   width: 22px;
   height: 3px;
-  margin: 5px auto;
+  margin: 0.313rem auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: var(--light-yellow);
@@ -176,7 +173,7 @@ nav.scrolled {
 .col h1 {
   margin-bottom: 40px;
   text-align: center;
-  font-size: 95px;
+  font-size: 5.938rem ;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--light-yellow);
@@ -187,7 +184,7 @@ nav.scrolled {
 .col p {
   margin-bottom: 16px;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -206,11 +203,11 @@ nav.scrolled {
   }
 
   .col h1 {
-    font-size: 70px;
+    font-size: 4.375rem;
   }
 
   .col p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   nav {
@@ -218,7 +215,7 @@ nav.scrolled {
   }
 
   .nav-menu li a {
-    font-size: 38px;
+    font-size: 2.375rem;
     font-weight: 600;
   }
 
@@ -263,7 +260,7 @@ nav.scrolled {
 
   li a {
     color: #bfbfbf;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .nav-menu.active {
@@ -315,17 +312,12 @@ nav.scrolled {
   }
 
   .col h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 
   .col p {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
-  }
-
-  .nav-menu li a {
-    font-size: 38px;
-    font-weight: 600;
   }
 
   .nav-logo {
@@ -388,12 +380,12 @@ nav.scrolled {
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 75rem;
   width: 100%;
 }
 
 .about h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
@@ -403,7 +395,7 @@ nav.scrolled {
 }
 
 .about p {
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 1.2;
   color: var(--light-yellow);
@@ -430,7 +422,7 @@ nav.scrolled {
 
 .left-column p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
   color: var(--light-yellow);
@@ -440,7 +432,7 @@ nav.scrolled {
 }
 
 .left-column span {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: #9a9a9a;
   letter-spacing: 1px;
@@ -487,7 +479,7 @@ nav.scrolled {
   }
 
   .about p {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
 
   .about-content {
@@ -521,16 +513,16 @@ nav.scrolled {
   }
 
   .about h2 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .about p {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .left-column p,
   .left-column span {
-    font-size: 16px;
+    font-size: 1rem;
     margin: 0;
   }
 
@@ -735,7 +727,7 @@ nav.scrolled {
   .cardboard .card {
     width: 100%;
     min-width: 200px;
-    height: 480px;
+    height: 420px;
   }
 }
 
@@ -1144,11 +1136,13 @@ nav.scrolled {
 
 .btn-project {
   color: var(--light-yellow);
+  font-size: 1.125rem;
   padding: 16px 40px;
   border-radius: 30px;
   background-color: transparent;
   border: 2px solid var(--light-yellow);
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  
 }
 
 .btn-project:hover {

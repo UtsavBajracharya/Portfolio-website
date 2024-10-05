@@ -1,5 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/poppins");
 
+
+:root {
+  --light-yellow: #F9F6EE;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +79,7 @@ nav.scrolled {
 
 .nav-menu li a {
   background: none;
-  color: #fff; /* Default color is white */
+  color: var(--light-yellow); /* Default color is white */
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -84,7 +89,7 @@ nav.scrolled {
 
 .nav-menu li a:before {
   content: "";
-  background: #ffffff;
+  background: var(--light-yellow);
   display: block;
   position: absolute;
   top: 90%;
@@ -96,7 +101,7 @@ nav.scrolled {
 
 .nav-menu li a:hover {
   background-position: 0;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 /* Set the non-hovered items to gray */
@@ -129,7 +134,7 @@ nav.scrolled {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
+  background-color: var(--light-yellow);
 }
 
 .banner {
@@ -170,7 +175,7 @@ nav.scrolled {
   font-size: 95px;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgb(246, 246, 246);
+  color: var(--light-yellow);
   line-height: 0.9;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -184,7 +189,7 @@ nav.scrolled {
     letter-spacing: 2px;
     text-transform: uppercase;
     line-height: 1.8em;
-    color: rgb(240, 240, 240);
+    color: var(--light-yellow);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
   }
 
@@ -389,7 +394,7 @@ nav.scrolled {
   text-transform: uppercase;
   line-height: 1.5em;
   margin-bottom: 60px;
-  color: #fff;
+  color: var(--light-yellow);
 }
 
 
