@@ -1151,3 +1151,41 @@ nav.scrolled {
 }
 
 /* Responsive Design */
+
+
+.card-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  margin: 0;
+}
+
+.card {
+  background-color: #e0e0e0;
+  width: 300px;
+  height: 200px;
+  margin: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Full-width and center alignment */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
