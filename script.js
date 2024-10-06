@@ -208,6 +208,30 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
 // };
 
 
+const marqueeTrack = document.querySelector('.marquee-track');
+let position = 0;  // Initial position of the marquee track
 
+// Listen for scroll events
+window.addEventListener('wheel', (event) => {
+  // Adjust position based on scroll direction
+  if (event.deltaY > 0) {
+    // Scrolling down - move left
+    position -= 10;
+  } else {
+    // Scrolling up - move right
+    position += 10;
+  }
+  
+  // Update the marquee track transform
+  marqueeTrack.style.transform = `translateX(${position}px)`;
+});
 
+// Optional: Reset position when it goes too far
+window.addEventListener('scroll', () => {
+  if (position < -marqueeTrack.scrollWidth / 2) {
+    position = 0;
+  } else if (position > marqueeTrack.scrollWidth / 2) {
+    position = 0;
+  }
+});
 
