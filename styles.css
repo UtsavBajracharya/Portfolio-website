@@ -1152,14 +1152,17 @@ nav.scrolled {
 
 /* Responsive Design */
 
-
-.card-section {
+.marquee-section {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  width: 100vw;
+  background-color: #333;
   padding: 50px 0;
-  margin: 0;
+}
+
+.marquee-track {
+  display: flex;
+  transition: transform 0.1s;
 }
 
 .card {
@@ -1180,12 +1183,4 @@ nav.scrolled {
   height: auto;
   padding: 15px;
   border-radius: 5px;
-}
-
-/* Full-width and center alignment */
-.wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  overflow-x: hidden;
 }
