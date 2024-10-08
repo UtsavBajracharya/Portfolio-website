@@ -1049,7 +1049,7 @@ nav.scrolled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(237, 237, 237, 0.8);
+  background-color: rgba(43, 43, 43, 0.8);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -1155,17 +1155,19 @@ nav.scrolled {
 .marquee-section {
   display: flex;
   overflow: hidden;
-  width: 100vw;
-  background-color: #333;
+  width: 100%;
   padding: 50px 0;
 }
 
 .marquee-track {
   display: flex;
   transition: transform 0.1s;
+  overflow: hidden;
+  animation: scroll-left 15s linear infinite;
+  transition: transform 0.1s;
 }
 
-.card {
+.item {
   background-color: #e0e0e0;
   width: 300px;
   height: 200px;
@@ -1178,9 +1180,19 @@ nav.scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
-  width: 80%;
+.item img {
+  width: 100%;
   height: auto;
-  padding: 15px;
+  padding: 24px;
   border-radius: 5px;
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
