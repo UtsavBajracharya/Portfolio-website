@@ -1115,7 +1115,7 @@ nav.scrolled {
   display: flex;
   transition: transform 0.1s;
   overflow: hidden;
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-right 15s linear infinite;
   transition: transform 0.1s;
 }
 

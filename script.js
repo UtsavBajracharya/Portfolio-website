@@ -189,49 +189,49 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
 
 
 
-document.querySelectorAll('.view-button').forEach(button => {
-  button.addEventListener('click', function() {
-    const imageSrc = this.parentElement.querySelector('img').src;
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const captionText = document.getElementById('caption');
+// document.querySelectorAll('.view-button').forEach(button => {
+//   button.addEventListener('click', function() {
+//     const imageSrc = this.parentElement.querySelector('img').src;
+//     const modal = document.getElementById('imageModal');
+//     const modalImg = document.getElementById('modalImage');
+//     const captionText = document.getElementById('caption');
 
-    modal.style.display = 'block';
-    modalImg.src = imageSrc;
-    captionText.innerHTML = this.parentElement.parentElement.querySelector('h3').innerText;
-  });
-});
+//     modal.style.display = 'block';
+//     modalImg.src = imageSrc;
+//     captionText.innerHTML = this.parentElement.parentElement.querySelector('h3').innerText;
+//   });
+// });
 
-document.querySelector('.close').onclick = function() {
-  const modal = document.getElementById('imageModal');
-  modal.style.display = 'none';
-};
+// document.querySelector('.close').onclick = function() {
+//   const modal = document.getElementById('imageModal');
+//   modal.style.display = 'none';
+// };
 
 
-const marqueeTrack = document.querySelector('.marquee-track');
-let position = 0;  // Initial position of the marquee track
+// const marqueeTrack = document.querySelector('.marquee-track');
+// let position = 0;  // Initial position of the marquee track
 
-// Listen for scroll events
-window.addEventListener('wheel', (event) => {
-  // Adjust position based on scroll direction
-  if (event.deltaY > 0) {
-    // Scrolling down - move left
-    position -= 10;
-  } else {
-    // Scrolling up - move right
-    position += 10;
-  }
+// // Listen for scroll events
+// window.addEventListener('wheel', (event) => {
+//   // Adjust position based on scroll direction
+//   if (event.deltaY > 0) {
+//     // Scrolling down - move left
+//     position -= 10;
+//   } else {
+//     // Scrolling up - move right
+//     position += 10;
+//   }
   
-  // Update the marquee track transform
-  marqueeTrack.style.transform = `translateX(${position}px)`;
-});
+//   // Update the marquee track transform
+//   marqueeTrack.style.transform = `translateX(${position}px)`;
+// });
 
-// Optional: Reset position when it goes too far
-window.addEventListener('scroll', () => {
-  if (position < -marqueeTrack.scrollWidth / 2) {
-    position = 0;
-  } else if (position > marqueeTrack.scrollWidth / 2) {
-    position = 0;
-  }
-});
+// // Optional: Reset position when it goes too far
+// window.addEventListener('scroll', () => {
+//   if (position < -marqueeTrack.scrollWidth / 2) {
+//     position = 0;
+//   } else if (position > marqueeTrack.scrollWidth / 2) {
+//     position = 0;
+//   }
+// });
 
