@@ -807,7 +807,7 @@ nav.scrolled {
 
 .experiences {
   width: 100%;
-  padding: 0 4rem 8rem 4rem;
+  padding: 0 4rem 0 4rem;
   display: grid;
   justify-content: center;
 }
@@ -1005,13 +1005,13 @@ nav.scrolled {
 
 .projects {
   width: 100%;
-  padding: 0 4rem 8rem 4rem;
+  padding: 8rem 4rem 8rem 4rem;
   display: flex;
   justify-content: center;
 }
 
 .projects h2 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.5em;
   text-transform: uppercase;
@@ -1020,15 +1020,29 @@ nav.scrolled {
   color: var(--light-yellow);
 }
 
+.project-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #313131; ;
+}
+
 .project-entry {
   color: var(--light-yellow); /* White text color */
-  margin-bottom: 30px; /* Spacing between entries */
   width: 100%; /* Full width */
   display: flex; /* Use flexbox */
   justify-content: space-between; /* Space between items */
+  border-bottom: 1px solid #313131;
+  padding: 40px 24px;
   align-items: center; /* Center items vertically */
   position: relative; /* For positioning the popup */
   cursor: pointer;
+  transition: all .2s ease-in-out; 
+}
+
+.project-entry:hover {
+  background-color: #383838;
+  transform: scale(1.1); 
+  
 }
 
 .project-entry h3 {
@@ -1049,25 +1063,33 @@ nav.scrolled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(43, 43, 43, 0.8);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: rgb(43, 43, 43);
+  padding: 50px 30px;
   text-align: center;
+  z-index: 1000;
 }
 
 .popup img {
   max-width: 100%;
-  height: 400px;
+  height: 280px;
 }
 
 .popup .view-button {
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 10px auto;
-  padding: 10px 20px;
+  padding: 30px 24px;
   background-color: #007bff;
   color: white;
   border: none;
-  cursor: pointer;
+  border-radius: 100%;
+}
+
+.view-button {
+
 }
 
 .popup .view-button:hover {
@@ -1076,7 +1098,6 @@ nav.scrolled {
 
 .project-entry:hover .popup {
   display: block; /* Show popup on hover */
-  cursor: pointer;
 }
 
 
