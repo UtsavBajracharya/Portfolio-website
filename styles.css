@@ -1104,7 +1104,9 @@ nav.scrolled {
 
 /* Responsive Design */
 
-.marquee-section {
+
+
+/* .marquee-section {
   display: flex;
   overflow: hidden;
   width: 100%;
@@ -1147,4 +1149,6 @@ nav.scrolled {
   100% {
     transform: translateX(-50%);
   }
-}
+
+} */
+
