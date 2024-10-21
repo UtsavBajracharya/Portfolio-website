@@ -1124,7 +1124,7 @@ nav.scrolled {
 
 .btn-project {
   color: var(--light-yellow);
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 16px 40px;
   border-radius: 30px;
   background-color: transparent;
@@ -1183,6 +1183,12 @@ nav.scrolled {
   padding-bottom: 1rem;
 }
 
+.project-sub-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .project-details p {
 
   margin: 20px 0;
@@ -1194,6 +1200,7 @@ nav.scrolled {
   color: #666;
 }
 }
+
 
 @media (min-width: 1024px) {
   .project-list-mob {
