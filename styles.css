@@ -451,7 +451,7 @@ nav.scrolled {
 /*Mobile responsive for about section*/
 @media (max-width: 1120px) {
   .about {
-    padding: 4rem 6rem;
+    padding: 6rem;
   }
 }
 
@@ -471,6 +471,13 @@ nav.scrolled {
   .left-column p {
     padding-right: 20px;
   }
+}
+
+@media (max-width: 1048px) {
+  .left-column {
+    flex: unset;
+  }
+  
 }
 
 @media (max-width: 948px) {
@@ -509,7 +516,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .about {
-    padding: 3rem;
+    padding: 6rem 3rem 0 3rem;
   }
 
   .about h2 {
@@ -568,7 +575,7 @@ nav.scrolled {
   flex-wrap: wrap;
   gap: 30px;
   max-width: 1200px;
-  margin: 30px 0;
+  margin: 60px 0;
   padding: 0;
 }
 
@@ -580,7 +587,6 @@ nav.scrolled {
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  margin: 30px 0;
   transition: 0.5s;
 }
 
@@ -685,8 +691,9 @@ nav.scrolled {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1208px) {
   .cardboard .card {
+    flex: 1 1 45%;
     min-width: 350px;
     height: 450px;
   }
@@ -717,7 +724,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .services {
-    padding: 3rem;
+    padding: 6rem 3rem;
   }
 
   .services h2 {
@@ -1116,8 +1123,7 @@ nav.scrolled {
   color: #121212;
 }
 
-/* Responsive Design */
-
+/* Project section responsive Design */
 
 /* Desktop view (up to 1024px) */
 @media (max-width: 1024px) {
@@ -1125,7 +1131,6 @@ nav.scrolled {
     display: none;
   }
 
-  
 .project-list-mob {
   display: flex;
   flex-wrap: wrap;
