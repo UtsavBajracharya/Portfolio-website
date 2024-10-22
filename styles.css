@@ -1231,7 +1231,7 @@ nav.scrolled {
   display: flex;
   justify-content:space-between;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .top-row h2 {
@@ -1260,7 +1260,7 @@ nav.scrolled {
 }
 
 .rotating-text img {
-  min-width: 150%;
+  min-width: 120%;
   height: auto;
   object-fit: fill; /* Ensures the image fits within the container */
   animation: rotateImage 20s linear infinite; /* Slow continuous rotation */
@@ -1283,7 +1283,7 @@ nav.scrolled {
   transform: rotate(0deg); /* Keep the arrow straight by default */
 }
 
-.rotating-text:hover .rotating-arrow {
+.rotating-arrow:hover {
   transform: rotate(360deg); /* Only rotate the arrow on hover */
 }
 
@@ -1301,28 +1301,37 @@ nav.scrolled {
   flex: 1 1 48%;
 }
 
+.get-in-touch {
+  text-align: right;
+}
+
+.get-in-touch h4{
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 .footer-info p, .get-in-touch h4 {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
-.social-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff;
+.footer-info p {
+  text-align: left;
 }
 
-.contact-button {
-  background-color: #ff5e57;
+.get-in-touch a,.contact-button {
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  border: 1px solid var(--light-yellow);
+  padding: 13px 24px;
   border-radius: 25px;
+  margin-left: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: #ff3e35;
+.get-in-touch a:hover,.contact-button:hover {
+  background-color: var(--light-yellow);
+  color: #383838;
 }
 
 /* Responsive for smaller screens */
