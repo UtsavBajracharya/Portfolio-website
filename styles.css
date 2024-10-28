@@ -1352,11 +1352,35 @@ nav.scrolled {
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
   .bottom-row {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   
   .footer-info, .get-in-touch {
     flex: 1 1 100%;
-    margin-bottom: 20px;
+    text-align: center;
   }
+
+  .footer-info {
+    margin-top: 60px;
+  }
+
+  .text {
+    justify-content:center ;
+  }
+
+  .rotating-text-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .rotating-text {
+    width: 40%;
+
+  }
+
+  /* .top-row h2 {
+    font-size: 2.6rem;
+  } */
 }
