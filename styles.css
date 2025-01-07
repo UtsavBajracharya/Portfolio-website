@@ -1384,3 +1384,10 @@ nav.scrolled {
     font-size: 2.6rem;
   } */
 }
+
+
+#currentYear {
+  visibility: visible;
+  display: inline;
+  color: inherit;
+}

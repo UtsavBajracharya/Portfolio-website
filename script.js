@@ -9,6 +9,9 @@ document.addEventListener('scroll', () => {
     }
 });
 
+const year = new Date().getFullYear();
+document.getElementById("currentYear").innerText = year;
+
 
 //Script for timeline scroll effect
 document.addEventListener('scroll', function() {
@@ -162,6 +165,8 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
     toggleIcon.classList.add('ri-menu-4-fill'); // Add hamburger icon
   }
 });
+
+
 
 
 
