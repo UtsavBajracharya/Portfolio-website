@@ -9,8 +9,13 @@ document.addEventListener('scroll', () => {
     }
 });
 
-const year = new Date().getFullYear(); //footer copyright year
-document.getElementById("currentYear").innerText = year;
+// Footer Year Script
+const year = new Date().getFullYear(); // Footer copyright year
+const yearElement = document.getElementById("currentYear");
+if (yearElement) {
+  yearElement.innerText = year;
+}
+
 
 
 //Script for timeline scroll effect
