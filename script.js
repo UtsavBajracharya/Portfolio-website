@@ -9,8 +9,13 @@ document.addEventListener('scroll', () => {
     }
 });
 
-const year = new Date().getFullYear();
-document.getElementById("currentYear").innerText = year;
+// Footer Year Script
+const year = new Date().getFullYear(); // Footer copyright year
+const yearElement = document.getElementById("currentYear");
+if (yearElement) {
+  yearElement.innerText = year;
+}
+
 
 
 //Script for timeline scroll effect
@@ -120,31 +125,33 @@ for (const target of targets) {
 }
 
 // Script for project filter
-let sortBtn = document.querySelector('.filter-menu').children;
-let sortItem = document.querySelector('.filter-item').children;
+let sortBtn = document.querySelector('.filter-menu')?.children;
+let sortItem = document.querySelector('.filter-item')?.children;
 
-for(let i = 0; i < sortBtn.length; i++){
-    sortBtn[i].addEventListener('click', function(){
-        for(let j = 0; j< sortBtn.length; j++){
-            sortBtn[j].classList.remove('current');
-        }
+if (sortBtn && sortItem) {
+  for(let i = 0; i < sortBtn.length; i++){
+      sortBtn[i].addEventListener('click', function(){
+          for(let j = 0; j< sortBtn.length; j++){
+              sortBtn[j].classList.remove('current');
+          }
 
-        this.classList.add('current');
-        
+          this.classList.add('current');
+          
 
-        let dataFilter = this.getAttribute('data-filter');
+          let dataFilter = this.getAttribute('data-filter');
 
-        for(let k = 0; k < sortItem.length; k++){
-            sortItem[k].classList.remove('active');
-            sortItem[k].classList.add('hide');
+          for(let k = 0; k < sortItem.length; k++){
+              sortItem[k].classList.remove('active');
+              sortItem[k].classList.add('hide');
 
-            if(sortItem[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
-                sortItem[k].classList.remove('hide');
-                sortItem[k].classList.add('active');
-            }
-        }
-    });
-}
+              if(sortItem[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
+                  sortItem[k].classList.remove('hide');
+                  sortItem[k].classList.add('active');
+              }
+          }
+      });
+    } 
+  }
 
 
 document.querySelector('.filter-toggle').addEventListener('click', function() {
