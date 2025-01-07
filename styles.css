@@ -1294,11 +1294,11 @@ nav.scrolled {
   font-size: 3.5rem;
   transition: transform 0.3s ease;
   cursor: pointer;
-  transform: rotate(0deg); /* Keep the arrow straight by default */
+  transform: rotate(0deg); 
 }
 
 .rotating-arrow:hover {
-  transform: rotate(360deg); /* Only rotate the arrow on hover */
+  transform: rotate(360deg); 
 }
 
 /* Bottom row */
@@ -1383,4 +1383,11 @@ nav.scrolled {
   /* .top-row h2 {
     font-size: 2.6rem;
   } */
+}
+
+
+#currentYear {
+  visibility: visible;
+  display: inline;
+  color: inherit;
 }
