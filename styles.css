@@ -1125,8 +1125,8 @@ nav.scrolled {
 .btn-project {
   color: var(--light-yellow);
   font-size: 1.2rem;
-  padding: 16px 40px;
-  border-radius: 30px;
+  padding: 16px 36px;
+  border-radius: 50px;
   background-color: transparent;
   border: 2px solid var(--light-yellow);
   transition: background-color 0.2s ease-in, color 0.2s ease-in;
@@ -1337,7 +1337,7 @@ nav.scrolled {
   color: #fff;
   border: 1px solid var(--light-yellow);
   font-size: 0.95rem;
-  padding: 13px 24px;
+  padding: 10px 24px;
   border-radius: 25px;
   margin-left: 24px;
   cursor: pointer;
@@ -1385,9 +1385,3 @@ nav.scrolled {
   } */
 }
 
-
-#currentYear {
-  visibility: visible;
-  display: inline;
-  color: inherit;
-}

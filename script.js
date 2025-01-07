@@ -9,7 +9,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-const year = new Date().getFullYear();
+const year = new Date().getFullYear(); //footer copyright year
 document.getElementById("currentYear").innerText = year;
 
 
