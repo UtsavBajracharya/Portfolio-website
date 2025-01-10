@@ -174,6 +174,44 @@ document.querySelector('.filter-toggle').addEventListener('click', function() {
 });
 
 
+//Pagination
+const itemsPerPage = 6; // Number of items per page
+const filterItems = document.querySelectorAll('.filter-item li');
+const paginationNumbers = document.querySelector('.page-numbers');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentPage = 1;
+let totalPages = Math.ceil(filterItems.length / itemsPerPage);
+
+// Display items for the current page
+function showItems(page) {
+    filterItems.forEach((item, index) => {
+        item.style.display = index >= (page - 1) * itemsPerPage && index < page * itemsPerPage ? 'block' : 'none';
+    });
+    paginationNumbers.textContent = `Page ${page} of ${totalPages}`;
+}
+
+// Handle pagination buttons
+prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        showItems(currentPage);
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        showItems(currentPage);
+    }
+});
+
+// Initialize the gallery
+showItems(currentPage);
+
+
+
 
 
 
