@@ -491,8 +491,9 @@ nav.scrolled {
 
 .filter-item li {
   width: 100%;
-  max-width: 300px; /* Set a maximum width for consistency */
+  max-width: 350px; /* Set a maximum width for consistency */
   flex: 1 1 calc(33.33% - 16px); /* Three columns with spacing */
+  margin: 1.2rem 0.8rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -539,6 +540,7 @@ nav.scrolled {
 @media screen and (max-width: 768px) {
   .filter-item li {
       flex: 1 1 calc(50% - 16px); /* Two columns for tablets */
+      margin: 1.2rem 0;
   }
 }
 
