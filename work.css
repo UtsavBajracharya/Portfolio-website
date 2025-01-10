@@ -485,15 +485,15 @@ nav.scrolled {
 .filter-item {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* Adds spacing between items */
+  gap: 16px 30px; /* Adds spacing between items */
   justify-content: center;
 }
 
 .filter-item li {
   width: 100%;
-  max-width: 350px; /* Set a maximum width for consistency */
+  max-width: 380px; /* Set a maximum width for consistency */
   flex: 1 1 calc(33.33% - 16px); /* Three columns with spacing */
-  margin: 1.2rem 0.8rem;
+  margin: 1rem 0rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
