@@ -382,7 +382,7 @@ nav.scrolled {
 
 .projects {
   width: 100%;
-  padding: 4rem 4rem 8rem 4rem;
+  padding: 0 4rem 8rem 4rem;
   display: flex;
   justify-content: center;
 }
@@ -534,7 +534,7 @@ nav.scrolled {
 @media screen and (min-width: 1280px){
   .filter-item li.active,
   .filter-item li{
-      width: 30%;
+      width: 33%;
   }
 
   h2{
