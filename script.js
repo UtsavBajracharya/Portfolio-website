@@ -141,12 +141,13 @@ if (sortBtn && sortItem) {
           let dataFilter = this.getAttribute('data-filter');
 
           for(let k = 0; k < sortItem.length; k++){
-              sortItem[k].classList.remove('active');
-              sortItem[k].classList.add('hide');
+            if (dataFilter === 'all' || sortItem[k].getAttribute('data-item') === dataFilter) {
+              sortItem[k].classList.remove('hide');
+              sortItem[k].classList.add('active');
 
-              if(sortItem[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
-                  sortItem[k].classList.remove('hide');
-                  sortItem[k].classList.add('active');
+            } else {
+              sortItem[k].classList.add('hide');
+              sortItem[k].classList.remove('active');
               }
           }
       });
