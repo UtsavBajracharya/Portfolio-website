@@ -486,7 +486,8 @@ nav.scrolled {
   display: flex;
   flex-wrap: wrap;
   gap: 16px 30px; /* Adds spacing between items */
-  justify-content: center;
+  justify-content: flex-start;
+  width: 1200px;
 }
 
 .filter-item li {
@@ -496,6 +497,28 @@ nav.scrolled {
   margin: 1rem 0rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
+}
+
+.filter-item li.active{
+  width: 50%;
+  padding: 16px;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0px, 0px, 0px);
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-delay: 0ms;
+  flex-wrap: wrap;
+}
+
+.filter-item li.hide{
+  display: none !important;
+  opacity: 0; 
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0px, 50px, 0px); /* Translate down */
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-delay: 0ms;
 }
 
 .filter-item img {
