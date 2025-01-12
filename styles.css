@@ -1385,3 +1385,68 @@ nav.scrolled {
   } */
 }
 
+
+/* Styling the social icons */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  left: 10px; /* Adjust spacing from the left */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between the icons */
+  z-index: 1000; /* Ensure the icons are above other elements */
+}
+
+.social-icons a {
+  color: #f9f6ee; /* Icon color */
+  font-size: 1.5rem; /* Adjust icon size */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Circle background */
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent circle for dark mode */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #f9f6ee; /* Light background on hover */
+  color: #121212; /* Dark icon color on hover */
+  transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .social-icons a {
+    font-size: 1.2rem; /* Smaller size on smaller screens */
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.tooltip {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #121212;
+  color: #f9f6ee;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover .tooltip {
+  opacity: 1;
+}
+
+
+
