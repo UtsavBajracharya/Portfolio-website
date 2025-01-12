@@ -212,6 +212,20 @@ nextButton.addEventListener('click', () => {
 showItems(currentPage);
 
 
+document.querySelectorAll('.social-icons a').forEach(icon => {
+  icon.addEventListener('mouseenter', () => {
+    const tooltip = document.createElement('span');
+    tooltip.innerText = icon.getAttribute('aria-label');
+    tooltip.className = 'tooltip';
+    icon.appendChild(tooltip);
+  });
+
+  icon.addEventListener('mouseleave', () => {
+    const tooltip = icon.querySelector('.tooltip');
+    if (tooltip) icon.removeChild(tooltip);
+  });
+});
+
 
 
 
