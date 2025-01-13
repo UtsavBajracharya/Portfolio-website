@@ -487,7 +487,6 @@ nav.scrolled {
   flex-wrap: wrap;
   gap: 16px 30px; /* Adds spacing between items */
   justify-content: flex-start;
-  width: 1200px;
 }
 
 .filter-item li {
@@ -561,6 +560,11 @@ nav.scrolled {
 }
 
 @media screen and (max-width: 768px) {
+
+  .filter-item {
+    width: 100%;
+  }
+
   .filter-item li {
       flex: 1 1 calc(50% - 16px); /* Two columns for tablets */
       margin: 1.2rem 0;
