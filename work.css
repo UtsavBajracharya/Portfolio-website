@@ -438,7 +438,7 @@ nav.scrolled {
   display: flex;
   justify-content: center; /* Center the filter items inside the menu */
   align-items: center;
-  gap: 30px;
+  gap: 14px 30px;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transition both transform and opacity */
   transform: translateX(-100%); /* Initially off-screen to the left */
   opacity: 0;
@@ -560,6 +560,26 @@ nav.scrolled {
 }
 
 @media screen and (max-width: 768px) {
+
+
+  .filter-toggle {
+    display: none;
+  }
+
+  .filter-menu.fade-out, .filter-menu.active  {
+    position: relative;
+    visibility: visible;
+    transform: none;
+    opacity: 1;
+    right: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .filter-menu li {
+    margin: 0;
+    
+  }
 
   .filter-item {
     width: 100%;
