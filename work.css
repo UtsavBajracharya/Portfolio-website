@@ -557,11 +557,10 @@ nav.scrolled {
   margin: 0 8px;
   font-size: 18px;
   font-weight: bold;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-
-
   .filter-toggle {
     display: none;
   }
