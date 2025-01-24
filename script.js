@@ -17,7 +17,6 @@ if (yearElement) {
 }
 
 
-
 //Script for timeline scroll effect
 document.addEventListener('scroll', function() {
   var timeline = document.querySelector('.timeline');
