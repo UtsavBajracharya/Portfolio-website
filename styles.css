@@ -1230,6 +1230,7 @@ nav.scrolled {
   justify-content:space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 50px;
 }
 
 .text {
@@ -1352,6 +1353,18 @@ nav.scrolled {
 }
 
 /* Responsive for smaller screens */
+
+@media (max-width: 1220px) {
+
+  .text{
+    justify-content: center;
+  }
+
+  .top-row {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .bottom-row {
     flex-direction: column-reverse;
@@ -1400,8 +1413,12 @@ nav.scrolled {
       text-align: center;
    }
 
+   .top-row {
+    gap: 24px;
+   }
+
    .rotating-text-container {
-      margin-top: 40px;
+      margin-top: 0px;
    }
 
    .rotating-text {
