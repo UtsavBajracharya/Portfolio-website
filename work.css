@@ -404,6 +404,11 @@ nav.scrolled {
   text-align: center;
 }
 
+.content {
+  max-width: 1200px;
+  width: 100%;
+}
+
 .filter-wrapper {
   position: relative;
   text-align: right; /* Align the icon to the right */
