@@ -452,6 +452,11 @@ nav.scrolled {
   .about {
     padding: 6rem;
   }
+
+  .content {
+    max-width: 75rem;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1252,8 +1257,6 @@ nav.scrolled {
   height: 200px;
 }
 
-
-
 .rotating-text {
   position: absolute;
   top: 50%;
@@ -1318,7 +1321,7 @@ nav.scrolled {
   text-transform: capitalize;
 }
 
-.footer-info p, .get-in-touch h4 {
+ .get-in-touch h4 {
   margin-bottom: 24px;
 }
 
@@ -1332,7 +1335,6 @@ nav.scrolled {
   font-size: 0.95rem;
   padding: 10px 24px;
   border-radius: 25px;
-  margin-left: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1340,6 +1342,13 @@ nav.scrolled {
 .get-in-touch a:hover,.contact-button:hover {
   background-color: var(--light-yellow);
   color: #383838;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 /* Responsive for smaller screens */
@@ -1369,14 +1378,17 @@ nav.scrolled {
 
   .rotating-text {
     width: 40%;
-
   }
 
-  
-  .contact-button {
-    margin-top: 30px;
-   }
+  .rotating-text-container {
+    margin-top: 40px;
+ }
 
+ .details {
+  margin-top: 40px;
+  justify-content: center;
+ }
+  
 }
 
 @media (max-width: 480px) {
@@ -1388,10 +1400,15 @@ nav.scrolled {
       text-align: center;
    }
 
+   .rotating-text-container {
+      margin-top: 40px;
+   }
+
+   .rotating-text {
+    width: 50%;
+   }
 
  }
-
-
 
 /* Styling the social icons */
 .social-icons {
