@@ -301,7 +301,7 @@ nav.scrolled {
 /* Mobile Styles */
 @media (max-width: 480px) {
   .container {
-    padding: 18rem 3rem 14rem 3rem !important;
+    padding: 18rem 1.5rem 14rem 1.5rem !important;
     max-width: none;
   }
 
@@ -534,7 +534,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .about {
-    padding: 6rem 3rem 0 3rem;
+    padding: 6rem 1.5rem 0 1.5rem;
   }
 
   .about h2 {
@@ -742,7 +742,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .services {
-    padding: 6rem 3rem;
+    padding: 6rem 1.5rem;
   }
 
   .services h2 {
@@ -1026,6 +1026,14 @@ nav.scrolled {
   }
 }
 
+
+@media screen and (max-width: 480px) {
+  .experiences {
+    padding: 0rem 1.5rem;
+  }
+
+ }
+
 /*Project styling starts*/
 
 .projects {
@@ -1235,6 +1243,13 @@ nav.scrolled {
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 8rem 1.5rem 0rem 1.5rem;
+  }
+}
+
 
 
 /* Styling for footer*/
@@ -1479,7 +1494,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .footer {
-    padding: 3rem 3rem 1.5rem 3rem;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
   }
 
   .top-row {
