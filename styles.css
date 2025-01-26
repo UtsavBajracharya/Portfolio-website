@@ -1144,7 +1144,7 @@ nav.scrolled {
 /* Project section responsive Design */
 
 /* Desktop view (up to 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1020px) {
   .project-list {
     display: none;
   }
@@ -1301,7 +1301,6 @@ nav.scrolled {
 /* Bottom row */
 .bottom-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
