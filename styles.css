@@ -998,6 +998,7 @@ nav.scrolled {
   .info-box {
     width: 100%;
     padding-left: 80px;
+    padding-right: 0;
   }
 
   .text-box {
@@ -1029,7 +1030,7 @@ nav.scrolled {
 
 .projects {
   width: 100%;
-  padding: 8rem 4rem 0rem 4rem;
+  padding: 8rem 3rem 0rem 3rem;
   display: flex;
   justify-content: center;
 }
@@ -1051,14 +1052,14 @@ nav.scrolled {
 }
 
 .project-entry {
-  color: var(--light-yellow); /* White text color */
-  width: 100%; /* Full width */
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Space between items */
+  color: var(--light-yellow); 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
   border-bottom: 1px solid #313131;
   padding: 40px 24px;
-  align-items: center; /* Center items vertically */
-  position: relative; /* For positioning the popup */
+  align-items: center; 
+  position: relative; 
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -1070,19 +1071,19 @@ nav.scrolled {
 }
 
 .project-entry h3 {
-  font-size: 46px; /* Large font size for headings */
-  font-weight: bold; /* Bold font weight for headings */
-  margin-right: 20px; /* Gap between h3 and p */
+  font-size: 46px; 
+  font-weight: bold; 
+  margin-right: 20px; 
 }
 
 .project-entry p {
-  font-size: 18px; /* Smaller font size for subheadings */
-  text-transform: uppercase; /* Uppercase letters for subheadings */
-  margin-left: auto; /* Align to the right */
+  font-size: 18px; 
+  text-transform: uppercase; 
+  margin-left: auto; 
 }
 
 .popup {
-  display: none; /* Hidden by default */
+  display: none; 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1125,6 +1126,7 @@ nav.scrolled {
   margin-top: 80px;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .btn-project {
@@ -1235,7 +1237,6 @@ nav.scrolled {
 }
 
 
-
 /* Styling for footer*/
 
 .footer {
@@ -1245,7 +1246,6 @@ nav.scrolled {
   display: flex;
   justify-content: center;
   background-color: #0d0d0d;
-  margin-top: 64px;
 }
 
 .content {
@@ -1314,7 +1314,7 @@ nav.scrolled {
 
 .rotating-arrow {
   position: absolute;
-  font-size: 3.5rem;
+  font-size: 4rem;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -1365,13 +1365,23 @@ nav.scrolled {
 }
 
 .social-icon {
-  color: #fff;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  transition: color 0.3s ease;
+  color: #f9f6ee; 
+  font-size: 1.2rem; 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover {
-  color: var(--light-yellow);
+  background-color: var(--light-yellow);
+  color: #121212; 
+  transform: scale(1.1); 
 }
 
 .get-in-touch a, .contact-button {
@@ -1381,7 +1391,7 @@ nav.scrolled {
   background-color: transparent;
   border: 1px solid var(--light-yellow);
   font-size: clamp(0.75rem, 1.8vw, 0.9rem);
-  padding: 10px 20px;
+  padding: 16px 24px;
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
@@ -1420,14 +1430,22 @@ nav.scrolled {
 
 /* Responsive styles */
 @media (max-width: 1220px) {
-  .text, .top-row {
+  .text {
     justify-content: center;
   }
 }
 
+@media (max-width: 928px) {
+  .top-row {
+    justify-content: center;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .footer {
-    padding: 4rem 2rem 2rem;
+    padding: 4rem 3rem 2rem 3rem;
   }
 
   .bottom-row {
@@ -1461,7 +1479,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .footer {
-    padding: 3rem 1rem 1.5rem;
+    padding: 3rem 3rem 1.5rem 3rem;
   }
 
   .top-row {
@@ -1476,6 +1494,10 @@ nav.scrolled {
   .rotating-text-container {
     width: 120px;
     height: 120px;
+  }
+
+  .rotating-arrow{
+    font-size: 2.5rem;
   }
 
   .details {
