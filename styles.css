@@ -301,7 +301,7 @@ nav.scrolled {
 /* Mobile Styles */
 @media (max-width: 480px) {
   .container {
-    padding: 18rem 1.5rem 14rem 1.5rem !important;
+    padding: 18rem 2rem 14rem 2rem !important;
     max-width: none;
   }
 
@@ -534,7 +534,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .about {
-    padding: 6rem 1.5rem 0 1.5rem;
+    padding: 4rem 2rem 0 2rem;
   }
 
   .about h2 {
@@ -742,7 +742,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .services {
-    padding: 6rem 1.5rem;
+    padding: 6rem 2rem;
   }
 
   .services h2 {
@@ -827,6 +827,13 @@ nav.scrolled {
 }
 
 /*Skills styling ends*/
+
+
+@media (max-width:480px) {
+  .skills {
+    padding: 0 2rem 8rem 2rem;
+  }
+}
 
 /*Experiences styling starts*/
 
@@ -1029,7 +1036,7 @@ nav.scrolled {
 
 @media screen and (max-width: 480px) {
   .experiences {
-    padding: 0rem 1.5rem;
+    padding: 0rem 2rem;
   }
 
  }
@@ -1246,7 +1253,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .projects {
-    padding: 8rem 1.5rem 0rem 1.5rem;
+    padding: 8rem 2rem 0rem 2rem;
   }
 }
 
@@ -1495,7 +1502,7 @@ nav.scrolled {
 
 @media (max-width: 480px) {
   .footer {
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    padding: 3rem 2rem 1.5rem 2rem;
   }
 
   .top-row {
