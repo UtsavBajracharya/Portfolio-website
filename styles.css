@@ -1191,7 +1191,7 @@ nav.scrolled {
 .project-list-mob {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .project-item {
