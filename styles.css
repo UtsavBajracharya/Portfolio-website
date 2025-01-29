@@ -1362,7 +1362,7 @@ nav.scrolled {
 }
 
 .get-in-touch h4 {
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: 1.4rem;
   font-weight: 600;
   text-transform: capitalize;
   margin-bottom: 24px;
@@ -1371,7 +1371,8 @@ nav.scrolled {
 
 .footer-info p {
   margin-bottom: 15px;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .social-icons {
@@ -1405,7 +1406,7 @@ nav.scrolled {
   color: #fff;
   background-color: transparent;
   border: 1px solid var(--light-yellow);
-  font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+  font-size: 0.85rem;
   padding: 16px 24px;
   border-radius: 25px;
   cursor: pointer;
