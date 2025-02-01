@@ -128,51 +128,51 @@ let sortBtn = document.querySelector('.filter-menu')?.children;
 let sortItem = document.querySelector('.filter-item')?.children;
 
 if (sortBtn && sortItem) {
-  for(let i = 0; i < sortBtn.length; i++){
-      sortBtn[i].addEventListener('click', function(){
-          for(let j = 0; j< sortBtn.length; j++){
-              sortBtn[j].classList.remove('current');
-          }
+  for (let i = 0; i < sortBtn.length; i++) {
+    sortBtn[i].addEventListener('click', function () {
+      for (let j = 0; j < sortBtn.length; j++) {
+        sortBtn[j].classList.remove('current');
+      }
 
-          this.classList.add('current');
-          
+      this.classList.add('current');
 
-          let dataFilter = this.getAttribute('data-filter');
+      let dataFilter = this.getAttribute('data-filter');
 
-          for(let k = 0; k < sortItem.length; k++){
-            if (dataFilter === 'all' || sortItem[k].getAttribute('data-item') === dataFilter) {
-              sortItem[k].classList.remove('hide');
-              sortItem[k].classList.add('active');
-
-            } else {
-              sortItem[k].classList.add('hide');
-              sortItem[k].classList.remove('active');
-              }
-          }
-      });
-    } 
+      for (let k = 0; k < sortItem.length; k++) {
+        if (dataFilter === 'all' || sortItem[k].getAttribute('data-item') === dataFilter) {
+          sortItem[k].classList.remove('hide');
+          sortItem[k].classList.add('active');
+        } else {
+          sortItem[k].classList.add('hide');
+          sortItem[k].classList.remove('active');
+        }
+      }
+    });
   }
+}
 
+// Toggle functionality for desktop
+if (window.innerWidth >= 769) {
+  document.querySelector('.filter-toggle').addEventListener('click', function () {
+    const filterMenu = document.querySelector('.filter-menu');
+    const toggleIcon = document.querySelector('.toggle-icon'); // Get the icon
 
-document.querySelector('.filter-toggle').addEventListener('click', function() {
-  const filterMenu = document.querySelector('.filter-menu');
-  const toggleIcon = document.querySelector('.toggle-icon'); // Get the icon
-
-  if (filterMenu.classList.contains('active')) {
-    // If the menu is active, close the menu and change the icon back to ri-menu-4-fill
-    filterMenu.classList.remove('active');
-    filterMenu.classList.add('fade-out');
-    toggleIcon.classList.remove('ri-menu-4-fill'); // Remove hamburger icon
-    toggleIcon.classList.add('ri-menu-2-fill'); // Add menu icon
-  } else {
-    // If the menu is inactive, open it and change the icon to ri-menu-4-fill
-    filterMenu.classList.remove('fade-out');
-    filterMenu.classList.add('active');
-    toggleIcon.classList.remove('ri-menu-2-fill'); // Remove menu icon
-    toggleIcon.classList.add('ri-menu-4-fill'); // Add hamburger icon
-  }
-});
-
+    if (filterMenu.classList.contains('active')) {
+      // If the menu is active, close the menu and change the icon back to ri-menu-2-fill
+      filterMenu.classList.remove('active');
+      filterMenu.classList.add('fade-out');
+      toggleIcon.classList.remove('ri-menu-4-fill'); // Remove hamburger icon
+      toggleIcon.classList.add('ri-menu-2-fill'); // Add menu icon
+    } else {
+      // If the menu is inactive, open it and change the icon to ri-menu-4-fill
+      filterMenu.classList.remove('fade-out');
+      filterMenu.classList.add('active');
+      toggleIcon.classList.remove('ri-menu-2-fill'); // Remove menu icon
+      toggleIcon.classList.add('ri-menu-4-fill'); // Add hamburger icon
+    }
+  });
+}
+a
 
 //Pagination
 const itemsPerPage = 6; // Number of items per page
