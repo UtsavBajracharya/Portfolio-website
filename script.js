@@ -123,7 +123,7 @@ for (const target of targets) {
   observer.observe(target);
 }
 
-// Script for project filter
+// Script for project filter(active)
 let sortBtn = document.querySelector('.filter-menu')?.children;
 let sortItem = document.querySelector('.filter-item')?.children;
 
