@@ -1149,14 +1149,13 @@ nav.scrolled {
   display: inline-block;
   padding: 16px 36px;
   color: var(--light-yellow);
-  background-color: transparent;
   border: 2px solid var(--light-yellow);
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-project::before {
@@ -1173,6 +1172,7 @@ nav.scrolled {
 
 .btn-project:hover {
   color: #0d0d0d;
+
 }
 
 .btn-project:hover::before {
