@@ -844,6 +844,7 @@ nav.scrolled {
   padding: 8px 12px;
   border-radius: 6px;
   white-space: nowrap;
+  margin-bottom: 4px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   opacity: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
