@@ -124,32 +124,75 @@ for (const target of targets) {
 }
 
 // Script for project filter
-let sortBtn = document.querySelector('.filter-menu')?.children;
-let sortItem = document.querySelector('.filter-item')?.children;
+// let sortBtn = document.querySelector('.filter-menu')?.children;
+// let sortItem = document.querySelector('.filter-item')?.children;
 
-if (sortBtn && sortItem) {
-  for (let i = 0; i < sortBtn.length; i++) {
-    sortBtn[i].addEventListener('click', function () {
-      for (let j = 0; j < sortBtn.length; j++) {
-        sortBtn[j].classList.remove('current');
+// if (sortBtn && sortItem) {
+//   for (let i = 0; i < sortBtn.length; i++) {
+//     sortBtn[i].addEventListener('click', function () {
+//       for (let j = 0; j < sortBtn.length; j++) {
+//         sortBtn[j].classList.remove('current');
+//       }
+
+//       this.classList.add('current');
+
+//       let dataFilter = this.getAttribute('data-filter');
+
+//       for (let k = 0; k < sortItem.length; k++) {
+//         if (dataFilter === 'all' || sortItem[k].getAttribute('data-item') === dataFilter) {
+//           sortItem[k].classList.remove('hide');
+//           sortItem[k].classList.add('active');
+//         } else {
+//           sortItem[k].classList.add('hide');
+//           sortItem[k].classList.remove('active');
+//         }
+//       }
+//     });
+//   }
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+  let sortBtn = document.querySelectorAll('.filter-menu li');
+  let sortItems = document.querySelectorAll('.filter-item li');
+
+  let selectedFilters = new Set(); // Store selected filters
+
+  sortBtn.forEach(button => {
+      button.addEventListener("click", function () {
+          let filter = this.getAttribute('data-filter');
+
+          // Toggle selection (Add if not present, Remove if already present)
+          if (selectedFilters.has(filter)) {
+              selectedFilters.delete(filter);
+              this.classList.remove("current");
+          } else {
+              selectedFilters.add(filter);
+              this.classList.add("current");
+          }
+
+          updateFilter();
+      });
+  });
+
+  function updateFilter() {
+      if (selectedFilters.size === 0) {
+          // Show all if no filter is selected
+          sortItems.forEach(item => item.style.display = "block");
+          return;
       }
 
-      this.classList.add('current');
+      sortItems.forEach(item => {
+          let itemCategory = item.getAttribute('data-item');
 
-      let dataFilter = this.getAttribute('data-filter');
-
-      for (let k = 0; k < sortItem.length; k++) {
-        if (dataFilter === 'all' || sortItem[k].getAttribute('data-item') === dataFilter) {
-          sortItem[k].classList.remove('hide');
-          sortItem[k].classList.add('active');
-        } else {
-          sortItem[k].classList.add('hide');
-          sortItem[k].classList.remove('active');
-        }
-      }
-    });
+          if (selectedFilters.has(itemCategory)) {
+              item.style.display = "block";
+          } else {
+              item.style.display = "none";
+          }
+      });
   }
-}
+});
+
 
 // Toggle functionality for desktop
 if (window.innerWidth >= 769) {
@@ -172,7 +215,7 @@ if (window.innerWidth >= 769) {
     }
   });
 }
-a
+
 
 //Pagination
 const itemsPerPage = 6; // Number of items per page
