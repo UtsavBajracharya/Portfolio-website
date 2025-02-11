@@ -1187,7 +1187,7 @@ nav.scrolled {
   padding: 16px 36px;
   color: var(--light-yellow);
   border: 2px solid var(--light-yellow);
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
@@ -1452,7 +1452,7 @@ nav.scrolled {
   border: 1px solid var(--light-yellow);
   font-size: 0.85rem;
   padding: 16px 24px;
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
   overflow: hidden;
