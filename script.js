@@ -176,21 +176,34 @@ if (window.innerWidth >= 769) {
 
 
 //Pagination
-const itemsPerPage = 6; // Number of items per page
-const filterItems = document.querySelectorAll('.filter-item li');
+// JavaScript: Filter + Pagination
+const itemsPerPage = 6;
+const allItems = document.querySelectorAll('.filter-item li');
+const filterMenu = document.querySelector('.filter-menu');
 const paginationNumbers = document.querySelector('.page-numbers');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 let currentPage = 1;
-let totalPages = Math.ceil(filterItems.length / itemsPerPage);
+let filteredItems = Array.from(allItems); // Start with all items
+let totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
-// Display items for the current page
+// Show items for the current page
 function showItems(page) {
-    filterItems.forEach((item, index) => {
-        item.style.display = index >= (page - 1) * itemsPerPage && index < page * itemsPerPage ? 'block' : 'none';
+    allItems.forEach(item => item.style.display = 'none'); // Hide all items first
+
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+
+    filteredItems.slice(start, end).forEach(item => {
+        item.style.display = 'block';
     });
+
     paginationNumbers.textContent = `Page ${page} of ${totalPages}`;
+
+    // Disable/enable buttons based on current page
+    prevButton.disabled = page === 1;
+    nextButton.disabled = page === totalPages;
 }
 
 // Handle pagination buttons
@@ -208,7 +221,28 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-// Initialize the gallery
+// Handle filtering
+filterMenu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+        const filter = e.target.getAttribute('data-filter');
+
+        // Update active class
+        document.querySelectorAll('.filter-menu li').forEach(li => li.classList.remove('current'));
+        e.target.classList.add('current');
+
+        if (filter === 'all') {
+            filteredItems = Array.from(allItems);
+        } else {
+            filteredItems = Array.from(allItems).filter(item => item.getAttribute('data-item') === filter);
+        }
+
+        totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        currentPage = 1; // Reset to first page on filter change
+        showItems(currentPage);
+    }
+});
+
+// Initial load
 showItems(currentPage);
 
 
