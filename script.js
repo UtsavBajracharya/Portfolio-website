@@ -176,7 +176,7 @@ if (window.innerWidth >= 769) {
 
 
 //Pagination
-const itemsPerPage = 4; // Number of items per page
+const itemsPerPage = 6; // Number of items per page
 const filterItems = document.querySelectorAll('.filter-item li');
 const paginationNumbers = document.querySelector('.page-numbers');
 const prevButton = document.querySelector('.prev');
