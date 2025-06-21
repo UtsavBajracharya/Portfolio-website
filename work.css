@@ -656,3 +656,39 @@ nav.scrolled {
     visibility: visible;
   }
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.base-image,
+.hover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start hidden to the left */
+}
+
+/* Hover effect to slide the second image in */
+.slide-hover:hover .hover-image {
+    transform: translateX(-100%); /* Slide in from left to right */
+}
+
+.slide-hover:hover .base-image {
+    transform: translateX(-100%); /* Slide out the base image */
+}
+
